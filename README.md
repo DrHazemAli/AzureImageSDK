@@ -1,11 +1,17 @@
 # Azure Image SDK
 
 [![NuGet](https://img.shields.io/nuget/v/AzureImage.svg)](https://www.nuget.org/packages/AzureImage/)
-[![GitHub](https://img.shields.io/github/license/your-repo/AzureImage)](LICENSE)
-[![Build Status](https://github.com/your-repo/AzureImage/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/your-repo/AzureImage/actions)
-[![codecov](https://codecov.io/gh/your-repo/AzureImage/branch/main/graph/badge.svg)](https://codecov.io/gh/your-repo/AzureImage)
+[![GitHub](https://img.shields.io/github/license/DrHazemAli/AzureImage)](LICENSE)
+[![Build Status](https://github.com/DrHazemAli/AzureImage/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/DrHazemAli/AzureImage/actions)
+[![codecov](https://codecov.io/gh/DrHazemAli/AzureImage/branch/main/graph/badge.svg)](https://codecov.io/gh/DrHazemAli/AzureImage)
 
 A comprehensive .NET SDK for Azure Image services, providing easy-to-use client libraries for image generation capabilities including Stable Image Ultra, Stable Image Core and more.
+
+![Azure Image SDK](https://github.com/DrHazemAli/AzureImage/blob/main/azure_image_sdk.jpg)
+
+
+Azure Image SDK is a .NET library that enables developers to easily integrate Azure AI Foundry's image capabilities into their applications. The SDK supports .NET 6.0 and above, providing a modern and efficient way to work with AI-powered image generation and manipulation.
+
 
 ## Features
 
@@ -375,9 +381,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 [Documentation](https://github.com/your-repo/AzureImage/wiki)
-- 🐛 [Issue Tracker](https://github.com/your-repo/AzureImage/issues)
-- 💬 [Discussions](https://github.com/your-repo/AzureImage/discussions)
+- 📖 [Documentation](https://github.com/DrHazemAli/AzureImage/wiki)
+- 🐛 [Issue Tracker](https://github.com/DrHazemAli/AzureImage/issues)
+- 💬 [Discussions](https://github.com/DrHazemAli/AzureImage/discussions)
 
 ## Acknowledgments
 

@@ -22,7 +22,9 @@ AzureImage SDK is a .NET library that enables developers to easily integrate Azu
 - [Quick Start Guide](Getting-Started/Quick-Start.md)
 - [API Reference](API-Reference/IAzureImageClient.md)
 - [Examples](Examples/Basic-Usage.md)
+- [Image Captioning](Features/Image-Captioning.md)
 - [Release Notes](Release-Notes/Changelog.md)
+- [Utilities](Utilities/AspectRatioConverter.md)
 
 ## Supported Models
 

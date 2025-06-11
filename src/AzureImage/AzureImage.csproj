@@ -11,9 +11,9 @@
     <Authors>Azure Image SDK Team</Authors>
     <Description>Official SDK for Azure Image services including image generation and other image-related AI capabilities</Description>
     <PackageTags>Azure;Image;SDK;StableImageUltra;StableImageCore;ImageGeneration</PackageTags>
-    <PackageProjectUrl>https://github.com/your-repo/AzureImage</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/DrHazemAli/AzureImage</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/your-repo/AzureImage</RepositoryUrl>
+    <RepositoryUrl>https://github.com/DrHazemAli/AzureImage</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

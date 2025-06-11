@@ -1,3 +1,6 @@
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using AzureImage.Inference.Models;
 
 namespace AzureImage.Core;
@@ -19,5 +22,61 @@ public interface IAzureImageClient
     Task<TResponse> GenerateImageAsync<TRequest, TResponse>(
         IImageGenerationModel model,
         TRequest request,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Generates a caption for the provided image stream using the specified captioning model
+    /// </summary>
+    /// <param name="model">The image captioning model to use</param>
+    /// <param name="imageStream">The image stream to caption</param>
+    /// <param name="options">Optional captioning options</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>The generated caption result</returns>
+    Task<ImageCaptionResult> GenerateCaptionAsync(
+        IImageCaptioningModel model,
+        Stream imageStream,
+        ImageCaptionOptions options = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Generates a caption for the provided image URL using the specified captioning model
+    /// </summary>
+    /// <param name="model">The image captioning model to use</param>
+    /// <param name="imageUrl">The image URL to caption</param>
+    /// <param name="options">Optional captioning options</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>The generated caption result</returns>
+    Task<ImageCaptionResult> GenerateCaptionAsync(
+        IImageCaptioningModel model,
+        string imageUrl,
+        ImageCaptionOptions options = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Generates dense captions for multiple regions in the provided image stream using the specified captioning model
+    /// </summary>
+    /// <param name="model">The image captioning model to use</param>
+    /// <param name="imageStream">The image stream to caption</param>
+    /// <param name="options">Optional captioning options</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>The generated dense caption results</returns>
+    Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
+        IImageCaptioningModel model,
+        Stream imageStream,
+        ImageCaptionOptions options = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Generates dense captions for multiple regions in the provided image URL using the specified captioning model
+    /// </summary>
+    /// <param name="model">The image captioning model to use</param>
+    /// <param name="imageUrl">The image URL to caption</param>
+    /// <param name="options">Optional captioning options</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>The generated dense caption results</returns>
+    Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
+        IImageCaptioningModel model,
+        string imageUrl,
+        ImageCaptionOptions options = null,
         CancellationToken cancellationToken = default);
 } 
