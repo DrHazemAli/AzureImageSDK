@@ -75,14 +75,12 @@ class Program
             Console.WriteLine("- StableImageUltra:ApiKey");
             Console.WriteLine();
             Console.WriteLine("Example appsettings.json:");
-            Console.WriteLine("""
-            {
-              "StableImageUltra": {
-                "Endpoint": "https://your-endpoint.eastus.models.ai.azure.com",
-                "ApiKey": "your-api-key-here"
-              }
-            }
-            """);
+            Console.WriteLine(@"{
+  ""StableImageUltra"": {
+    ""Endpoint"": ""https://your-endpoint.eastus.models.ai.azure.com"",
+    ""ApiKey"": ""your-api-key-here""
+  }
+}");
             return false;
         }
 

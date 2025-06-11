@@ -196,7 +196,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
                 {
                     result.Caption = new Caption
                     {
-                        Text = captionElement.GetProperty("text").GetString(),
+                        Text = captionElement.GetProperty("text").GetString() ?? string.Empty,
                         Confidence = captionElement.GetProperty("confidence").GetDouble()
                     };
                 }
@@ -240,7 +240,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
                     {
                         var denseCaption = new DenseCaption
                         {
-                            Text = captionElement.GetProperty("text").GetString(),
+                            Text = captionElement.GetProperty("text").GetString() ?? string.Empty,
                             Confidence = captionElement.GetProperty("confidence").GetDouble()
                         };
 
