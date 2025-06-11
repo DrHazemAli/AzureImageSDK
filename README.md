@@ -7,7 +7,7 @@
 
 A comprehensive .NET SDK for Azure Image services, providing easy-to-use client libraries for image generation capabilities including Stable Image Ultra, Stable Image Core and more.
 
-![Azure Image SDK](https://github.com/DrHazemAli/AzureImage/blob/main/azure_image_sdk.jpg)
+![Azure Image SDK](https://raw.githubusercontent.com/DrHazemAli/AzureImageSDK/refs/heads/main/azure_image_sdk.jpg)
 
 
 Azure Image SDK is a .NET library that enables developers to easily integrate Azure AI Foundry's image capabilities into their applications. The SDK supports .NET 6.0 and above, providing a modern and efficient way to work with AI-powered image generation and manipulation.
