@@ -5,6 +5,87 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2024-12-19
+
+### Added
+
+#### 🎨 GPT-Image-1 Model Support
+- **GPT-Image-1 Model** - Complete support for Azure OpenAI's GPT-Image-1 model
+  - **Image Generation** - Generate high-quality images from text prompts
+    - Support for customizable image sizes (1024x1024, 1024x1536, 1536x1024)
+    - Three quality levels: low, medium, high (optimized for speed vs quality)
+    - Multiple output formats: PNG, JPEG with configurable compression
+    - Batch generation support (1-10 images per request)
+    - User tracking for usage monitoring
+    - Revised prompt access to see how prompts were interpreted
+  - **Image Editing** - Advanced image editing capabilities
+    - Edit existing images using text prompts
+    - Optional mask support for precise editing regions
+    - Same quality and format options as generation
+    - Multipart/form-data API support for image uploads
+    - Helper methods for file-based and byte-based image handling
+  - **Unified Model Architecture** - Single model supporting both generation and editing
+    - Implements both `IImageGenerationModel` and `IImageEditingModel` interfaces
+    - Per-deployment configuration with individual endpoints and API keys
+    - Configurable timeouts, retry policies, and error handling
+    - Built-in validation for all request parameters
+
+#### 🏗️ Enhanced Core Architecture
+- **Image Editing Interface** - New `IImageEditingModel` interface for editing capabilities
+  - Standardized editing endpoint and configuration management
+  - Consistent timeout and retry behavior across all editing models
+  - Extensible design for future editing model implementations
+
+#### 📁 Request/Response Models
+- **ImageGenerationRequest** - Comprehensive request model for image generation
+  - Full parameter validation with descriptive error messages
+  - JSON serialization attributes for proper API communication
+  - Support for all GPT-Image-1 generation parameters
+- **ImageGenerationResponse** - Rich response model with helper methods
+  - URL-based image access with 24-hour availability
+  - Automatic HTTP download and file saving capabilities
+  - Error handling for content filtering and API failures
+  - Timestamp conversion and metadata access
+- **ImageEditingRequest** - Specialized request model for image editing
+  - Multipart/form-data structure for file uploads
+  - Static factory methods for file and byte-based creation
+  - Mask image support with validation
+  - Helper methods for common editing scenarios
+- **ImageEditingResponse** - Inherits from generation response for consistency
+  - Same download and error handling capabilities
+  - Semantic clarity for editing vs generation operations
+
+#### 🔧 Configuration & Options
+- **GPTImage1Options** - Comprehensive configuration class
+  - Required deployment name for Azure OpenAI resource targeting
+  - Flexible API version support (default: 2025-04-01-preview)
+  - Configurable default values for size, quality, format, and compression
+  - Extensive validation with descriptive error messages
+  - Support for custom timeout and retry policies
+
+#### ✅ Testing & Quality Assurance
+- **Comprehensive Unit Tests** - Full test coverage for all components
+  - `GPTImage1OptionsTests` - Configuration validation and default value testing
+  - `ImageGenerationRequestTests` - Request model validation and parameter testing  
+  - `ImageEditingRequestTests` - Editing request validation and file handling testing
+  - Edge case coverage including null values, invalid ranges, and malformed data
+  - Mock-based testing for external dependencies
+  - Async operation testing for file I/O operations
+
+### Enhanced
+- **Package Metadata** - Updated package tags to include GPT-Image-1 and image editing
+- **Documentation** - Comprehensive inline documentation for all public APIs
+- **Error Handling** - Enhanced validation with specific error messages for troubleshooting
+
+### Technical Details
+- **API Compatibility** - Supports Azure OpenAI GPT-Image-1 API version 2025-04-01-preview
+- **Content Safety** - Built-in support for Azure's content filtering responses
+- **Image Formats** - PNG and JPEG output with customizable compression (0-100)
+- **Size Support** - Three predefined sizes optimized for GPT-Image-1 performance
+- **Batch Processing** - Generate up to 10 images in a single request
+- **File Operations** - Seamless file I/O with automatic directory creation
+- **Memory Efficiency** - Byte array handling for in-memory image processing
+
 ## [1.0.0] - 2024-12-19
 
 ### Added
