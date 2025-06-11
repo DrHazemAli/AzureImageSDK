@@ -17,7 +17,7 @@ namespace AzureImage.Utilities
         /// <returns>The extracted image metadata</returns>
         /// <exception cref="ArgumentNullException">Thrown when the image stream is null</exception>
         /// <exception cref="ArgumentException">Thrown when the image stream is invalid</exception>
-        public static async Task<ImageMetadata> ExtractMetadataAsync(Stream imageStream)
+        public static Task<ImageMetadata> ExtractMetadataAsync(Stream imageStream)
         {
             if (imageStream == null)
                 throw new ArgumentNullException(nameof(imageStream));
@@ -27,7 +27,7 @@ namespace AzureImage.Utilities
 
             // TODO: Implement actual metadata extraction using System.Drawing or other image processing library
             // This is a placeholder implementation
-            return new ImageMetadata
+            var metadata = new ImageMetadata
             {
                 Width = 0,
                 Height = 0,
@@ -37,6 +37,8 @@ namespace AzureImage.Utilities
                 LastModified = DateTime.UtcNow,
                 Properties = new Dictionary<string, string>()
             };
+
+            return Task.FromResult(metadata);
         }
 
         /// <summary>
@@ -99,7 +101,7 @@ namespace AzureImage.Utilities
         /// <summary>
         /// Gets or sets the format of the image (e.g., "JPEG", "PNG").
         /// </summary>
-        public string Format { get; set; }
+        public string Format { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the size of the image in bytes.
@@ -119,6 +121,6 @@ namespace AzureImage.Utilities
         /// <summary>
         /// Gets or sets additional properties of the image.
         /// </summary>
-        public Dictionary<string, string> Properties { get; set; }
+        public Dictionary<string, string> Properties { get; set; } = new Dictionary<string, string>();
     }
 } 

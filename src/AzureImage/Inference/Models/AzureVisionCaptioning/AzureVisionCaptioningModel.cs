@@ -36,7 +36,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// </summary>
         public async Task<ImageCaptionResult> GenerateCaptionAsync(
             Stream imageStream, 
-            ImageCaptionOptions options = null, 
+            ImageCaptionOptions? options = null, 
             CancellationToken cancellationToken = default)
         {
             if (imageStream == null)
@@ -57,7 +57,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// </summary>
         public async Task<ImageCaptionResult> GenerateCaptionAsync(
             string imageUrl, 
-            ImageCaptionOptions options = null, 
+            ImageCaptionOptions? options = null, 
             CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrWhiteSpace(imageUrl))
@@ -80,7 +80,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// </summary>
         public async Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
             Stream imageStream, 
-            ImageCaptionOptions options = null, 
+            ImageCaptionOptions? options = null, 
             CancellationToken cancellationToken = default)
         {
             if (imageStream == null)
@@ -101,7 +101,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// </summary>
         public async Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
             string imageUrl, 
-            ImageCaptionOptions options = null, 
+            ImageCaptionOptions? options = null, 
             CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrWhiteSpace(imageUrl))

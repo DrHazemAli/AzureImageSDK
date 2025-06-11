@@ -80,7 +80,7 @@ public class AzureImageClient : IAzureImageClient, IDisposable
     public async Task<ImageCaptionResult> GenerateCaptionAsync(
         IImageCaptioningModel model,
         Stream imageStream,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default)
     {
         if (model == null)
@@ -115,7 +115,7 @@ public class AzureImageClient : IAzureImageClient, IDisposable
     public async Task<ImageCaptionResult> GenerateCaptionAsync(
         IImageCaptioningModel model,
         string imageUrl,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default)
     {
         if (model == null)
@@ -150,7 +150,7 @@ public class AzureImageClient : IAzureImageClient, IDisposable
     public async Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
         IImageCaptioningModel model,
         Stream imageStream,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default)
     {
         if (model == null)
@@ -186,7 +186,7 @@ public class AzureImageClient : IAzureImageClient, IDisposable
     public async Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
         IImageCaptioningModel model,
         string imageUrl,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default)
     {
         if (model == null)

@@ -1,3 +1,4 @@
+using System;
 using AzureImage.Core;
 using AzureImage.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,8 +24,8 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<ModelHttpClientService>(provider =>
         {
             var loggerFactory = provider.GetService<Microsoft.Extensions.Logging.ILoggerFactory>();
-            var logger = loggerFactory?.CreateLogger<ModelHttpClientService>();
-            return new ModelHttpClientService(logger: logger);
+            var logger = loggerFactory?.CreateLogger(typeof(ModelHttpClientService).FullName ?? nameof(ModelHttpClientService));
+            return new ModelHttpClientService(logger: new Microsoft.Extensions.Logging.Abstractions.NullLogger<ModelHttpClientService>());
         });
 
         // Register main client

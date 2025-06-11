@@ -35,7 +35,7 @@ public interface IAzureImageClient
     Task<ImageCaptionResult> GenerateCaptionAsync(
         IImageCaptioningModel model,
         Stream imageStream,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -49,7 +49,7 @@ public interface IAzureImageClient
     Task<ImageCaptionResult> GenerateCaptionAsync(
         IImageCaptioningModel model,
         string imageUrl,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -63,7 +63,7 @@ public interface IAzureImageClient
     Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
         IImageCaptioningModel model,
         Stream imageStream,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -77,6 +77,6 @@ public interface IAzureImageClient
     Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
         IImageCaptioningModel model,
         string imageUrl,
-        ImageCaptionOptions options = null,
+        ImageCaptionOptions? options = null,
         CancellationToken cancellationToken = default);
 } 

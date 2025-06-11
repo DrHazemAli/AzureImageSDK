@@ -10,12 +10,12 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// <summary>
         /// Gets or sets the Azure AI Vision endpoint URL.
         /// </summary>
-        public string Endpoint { get; set; }
+        public string Endpoint { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the Azure AI Vision API key for authentication.
         /// </summary>
-        public string ApiKey { get; set; }
+        public string ApiKey { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the API version to use. Default is "2024-02-01".
@@ -25,7 +25,7 @@ namespace AzureImage.Inference.Models.AzureVisionCaptioning
         /// <summary>
         /// Gets or sets the deployment name (if using a custom deployment).
         /// </summary>
-        public string DeploymentName { get; set; }
+        public string DeploymentName { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the request timeout in seconds. Default is 30 seconds.

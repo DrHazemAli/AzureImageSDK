@@ -49,7 +49,7 @@ namespace AzureImage.Utilities
             if (!fileExtension.StartsWith("."))
                 fileExtension = "." + fileExtension;
 
-            if (!MimeTypeMap.TryGetValue(fileExtension, out string mimeType))
+            if (!MimeTypeMap.TryGetValue(fileExtension, out string? mimeType) || mimeType == null)
                 throw new ArgumentException($"Unsupported file extension: {fileExtension}", nameof(fileExtension));
 
             return mimeType;
@@ -66,7 +66,7 @@ namespace AzureImage.Utilities
             if (string.IsNullOrWhiteSpace(mimeType))
                 throw new ArgumentException("MIME type cannot be null or empty", nameof(mimeType));
 
-            if (!ExtensionMap.TryGetValue(mimeType, out string extension))
+            if (!ExtensionMap.TryGetValue(mimeType, out string? extension) || extension == null)
                 throw new ArgumentException($"Unsupported MIME type: {mimeType}", nameof(mimeType));
 
             return extension;

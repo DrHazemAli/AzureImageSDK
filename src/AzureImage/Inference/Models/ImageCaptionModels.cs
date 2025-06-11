@@ -33,17 +33,17 @@ namespace AzureImage.Inference.Models
         /// <summary>
         /// Gets or sets the generated caption.
         /// </summary>
-        public Caption Caption { get; set; }
+        public Caption? Caption { get; set; }
 
         /// <summary>
         /// Gets or sets the model version used for captioning.
         /// </summary>
-        public string ModelVersion { get; set; }
+        public string? ModelVersion { get; set; }
 
         /// <summary>
         /// Gets or sets the metadata about the analyzed image.
         /// </summary>
-        public ImageMetadata Metadata { get; set; }
+        public ImageMetadata? Metadata { get; set; }
     }
 
     /// <summary>
@@ -59,12 +59,12 @@ namespace AzureImage.Inference.Models
         /// <summary>
         /// Gets or sets the model version used for captioning.
         /// </summary>
-        public string ModelVersion { get; set; }
+        public string? ModelVersion { get; set; }
 
         /// <summary>
         /// Gets or sets the metadata about the analyzed image.
         /// </summary>
-        public ImageMetadata Metadata { get; set; }
+        public ImageMetadata? Metadata { get; set; }
     }
 
     /// <summary>
@@ -75,7 +75,7 @@ namespace AzureImage.Inference.Models
         /// <summary>
         /// Gets or sets the caption text.
         /// </summary>
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the confidence score (0.0 to 1.0).
@@ -91,7 +91,7 @@ namespace AzureImage.Inference.Models
         /// <summary>
         /// Gets or sets the bounding box coordinates for this caption's region.
         /// </summary>
-        public BoundingBox BoundingBox { get; set; }
+        public BoundingBox BoundingBox { get; set; } = new BoundingBox();
     }
 
     /// <summary>

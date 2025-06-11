@@ -16,7 +16,7 @@ namespace AzureImage.Utilities
         /// <returns>A value between 0 and 1 representing the image sharpness</returns>
         /// <exception cref="ArgumentNullException">Thrown when the image stream is null</exception>
         /// <exception cref="ArgumentException">Thrown when the image stream is invalid</exception>
-        public static async Task<double> CalculateSharpnessAsync(Stream imageStream)
+        public static Task<double> CalculateSharpnessAsync(Stream imageStream)
         {
             if (imageStream == null)
                 throw new ArgumentNullException(nameof(imageStream));
@@ -26,7 +26,7 @@ namespace AzureImage.Utilities
 
             // TODO: Implement actual sharpness calculation using image processing algorithms
             // This is a placeholder implementation
-            return 0.5;
+            return Task.FromResult(0.5);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace AzureImage.Utilities
         /// <returns>A value between 0 and 1 representing the image brightness</returns>
         /// <exception cref="ArgumentNullException">Thrown when the image stream is null</exception>
         /// <exception cref="ArgumentException">Thrown when the image stream is invalid</exception>
-        public static async Task<double> CalculateBrightnessAsync(Stream imageStream)
+        public static Task<double> CalculateBrightnessAsync(Stream imageStream)
         {
             if (imageStream == null)
                 throw new ArgumentNullException(nameof(imageStream));
@@ -46,7 +46,7 @@ namespace AzureImage.Utilities
 
             // TODO: Implement actual brightness calculation using image processing algorithms
             // This is a placeholder implementation
-            return 0.5;
+            return Task.FromResult(0.5);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace AzureImage.Utilities
         /// <returns>A value between 0 and 1 representing the image contrast</returns>
         /// <exception cref="ArgumentNullException">Thrown when the image stream is null</exception>
         /// <exception cref="ArgumentException">Thrown when the image stream is invalid</exception>
-        public static async Task<double> CalculateContrastAsync(Stream imageStream)
+        public static Task<double> CalculateContrastAsync(Stream imageStream)
         {
             if (imageStream == null)
                 throw new ArgumentNullException(nameof(imageStream));
@@ -66,7 +66,7 @@ namespace AzureImage.Utilities
 
             // TODO: Implement actual contrast calculation using image processing algorithms
             // This is a placeholder implementation
-            return 0.5;
+            return Task.FromResult(0.5);
         }
 
         /// <summary>

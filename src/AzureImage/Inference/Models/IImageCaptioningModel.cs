@@ -18,7 +18,7 @@ namespace AzureImage.Inference.Models
         /// <returns>The generated caption result</returns>
         Task<ImageCaptionResult> GenerateCaptionAsync(
             Stream imageStream,
-            ImageCaptionOptions options = null,
+            ImageCaptionOptions? options = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace AzureImage.Inference.Models
         /// <returns>The generated caption result</returns>
         Task<ImageCaptionResult> GenerateCaptionAsync(
             string imageUrl,
-            ImageCaptionOptions options = null,
+            ImageCaptionOptions? options = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace AzureImage.Inference.Models
         /// <returns>The generated dense caption results</returns>
         Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
             Stream imageStream,
-            ImageCaptionOptions options = null,
+            ImageCaptionOptions? options = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace AzureImage.Inference.Models
         /// <returns>The generated dense caption results</returns>
         Task<DenseCaptionResult> GenerateDenseCaptionsAsync(
             string imageUrl,
-            ImageCaptionOptions options = null,
+            ImageCaptionOptions? options = null,
             CancellationToken cancellationToken = default);
     }
 } 
