@@ -1,96 +1,83 @@
-# Azure Image SDK Wiki
+# AzureImage SDK Documentation
 
-Welcome to the Azure Image SDK documentation! This SDK provides a comprehensive .NET solution for integrating with Azure AI services using a modern model-based architecture.
+Welcome to the AzureImage SDK documentation! This SDK provides a simple and efficient way to interact with Azure AI Foundry's image generation and manipulation services.
 
-## 🏗️ Architecture Overview
+## Overview
 
-The Azure Image SDK follows a **model-based architecture** where each AI model has its own configuration, parameters, and capabilities. This design provides:
+AzureImage SDK is a .NET library that enables developers to easily integrate Azure AI Foundry's image capabilities into their applications. The SDK supports .NET 6.0 and above, providing a modern and efficient way to work with AI-powered image generation and manipulation.
 
-- **🎯 Model Independence**: Each model can have different endpoints, API versions, and parameters
-- **🔧 Flexible Configuration**: Per-model timeouts, retry policies, and settings
-- **📈 Scalability**: Easy to add new models without affecting existing ones
-- **🧪 Type Safety**: Strong typing for model-specific requests and responses
+## Key Features
 
-## 📚 Documentation Structure
+- 🚀 Easy integration with Azure AI Foundry
+- 🎨 Support for multiple image generation models
+- ⚡ High-performance async operations
+- 🔒 Built-in security and authentication
+- 📦 Available as NuGet and GitHub packages
+- 🧪 Comprehensive test coverage
+- 📚 Extensive documentation and examples
 
-### Getting Started
-- [Installation Guide](Installation.md)
-- [Quick Start](Quick-Start.md)
-- [Configuration](Configuration.md)
+## Quick Links
 
-### Model Types
+- [Getting Started](Getting-Started/Installation.md)
+- [Quick Start Guide](Getting-Started/Quick-Start.md)
+- [API Reference](API-Reference/IAzureImageClient.md)
+- [Examples](Examples/Basic-Usage.md)
+- [Release Notes](Release-Notes/Changelog.md)
 
-#### Image Generation
-- [StableImageUltra](models/image-generation/StableImageUltra.md)
+## Supported Models
 
-### Advanced Topics
-- [Model-Based Architecture](architecture/Model-Based-Architecture.md)
-- [Error Handling](Error-Handling.md)
-- [Logging](Logging.md)
-- [Dependency Injection](Dependency-Injection.md)
-- [Testing](Testing.md)
+- [StableImageUltra](Models/StableImageUltra/Overview.md)
+- [StableImageCore](Models/StableImageCore/Overview.md)
 
-### Examples & Samples
-- [Basic Usage Examples](examples/Basic-Usage.md)
-- [Advanced Scenarios](examples/Advanced-Scenarios.md)
-- [Sample Projects](examples/Sample-Projects.md)
+## Installation
 
-### API Reference
-- [Core Interfaces](api/Core-Interfaces.md)
-- [Model Interfaces](api/Model-Interfaces.md)
-- [Configuration Options](api/Configuration-Options.md)
+The SDK is available as both a NuGet package and a GitHub package. See our [Installation Guide](Getting-Started/Installation.md) for detailed instructions.
 
-### Development
-- [Contributing](Contributing.md)
-- [Building from Source](Building.md)
-- [Release Notes](Release-Notes.md)
+```bash
+# NuGet Package
+dotnet add package AzureImage
 
-## 🚀 Quick Example
-
-```csharp
-using AzureImage.Core;
-using AzureImage.Inference.Image.StableImageUltra;
-
-// Create model with configuration
-var model = StableImageUltraModel.Create(
-    endpoint: "https://your-endpoint.eastus.models.ai.azure.com",
-    apiKey: "your-api-key");
-
-// Create Azure AI client
-using var client = AzureAIClient.Create();
-
-// Create model-specific request
-var request = new ImageGenerationRequest
-{
-    Model = model.ModelName,
-    Prompt = "A beautiful sunset over mountains"
-};
-
-// Generate image
-var response = await client.GenerateImageAsync<ImageGenerationRequest, ImageGenerationResponse>(
-    model, request);
-
-// Save the result
-await response.SaveImageAsync("sunset.png");
+# GitHub Package
+dotnet add package AzureImage --source https://nuget.pkg.github.com/DrHazemAli/index.json
 ```
 
-## 🎯 Key Benefits
+## Quick Example
 
-- **Model-Specific Configuration**: Each model manages its own endpoints, API versions, and parameters
-- **Type Safety**: Strongly typed requests and responses for each model
-- **Flexible Architecture**: Easy to extend with new models and capabilities
-- **Production Ready**: Built-in retry logic, error handling, and logging
-- **Dependency Injection**: Full support for .NET DI container
+```csharp
+using AzureImage;
+using AzureImage.Inference.Models;
 
-## 📖 Next Steps
+// Initialize the client
+var client = new AzureImageClient(new AzureImageOptions
+{
+    Endpoint = "your-endpoint",
+    ApiKey = "your-api-key"
+});
 
-1. [Install the SDK](Installation.md)
-2. [Follow the Quick Start guide](Quick-Start.md)
-3. [Explore model-specific documentation](models/)
-4. [Check out sample projects](examples/Sample-Projects.md)
+// Generate an image
+var result = await client.GenerateImageAsync(new ImageGenerationRequest
+{
+    Prompt = "A beautiful sunset over mountains",
+    Model = "stable-image-ultra"
+});
+```
 
-## 🆘 Support
+## Contributing
 
-- 📖 [Documentation](https://github.com/your-repo/AzureImage/wiki)
-- 🐛 [Issue Tracker](https://github.com/your-repo/AzureImage/issues)
-- 💬 [Discussions](https://github.com/your-repo/AzureImage/discussions) 
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- [GitHub Issues](https://github.com/DrHazemAli/AzureImageSDK/issues)
+- [Documentation](https://github.com/DrHazemAli/AzureImageSDK/wiki)
+- [Samples](https://github.com/DrHazemAli/AzureImageSDK/tree/main/samples)
+
+## References
+
+- [Azure AI Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+- [Azure SDK Design Guidelines](https://azure.github.io/azure-sdk/dotnet_introduction.html) 
