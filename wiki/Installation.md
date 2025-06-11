@@ -1,6 +1,6 @@
 # Installation Guide
 
-This guide walks you through installing the Azure AI SDK for .NET.
+This guide walks you through installing the Azure Image SDK for .NET.
 
 ## Prerequisites
 
@@ -19,13 +19,13 @@ This guide walks you through installing the Azure AI SDK for .NET.
 ### Package Manager Console (Visual Studio)
 
 ```powershell
-Install-Package AzureAISDK
+Install-Package AzureImage
 ```
 
 ### .NET CLI
 
 ```bash
-dotnet add package AzureAISDK
+dotnet add package AzureImage
 ```
 
 ### PackageReference (Manual)
@@ -33,7 +33,7 @@ dotnet add package AzureAISDK
 Add this to your `.csproj` file:
 
 ```xml
-<PackageReference Include="AzureAISDK" Version="1.0.0" />
+<PackageReference Include="AzureImage" Version="1.0.0" />
 ```
 
 ### GitHub Packages
@@ -48,7 +48,7 @@ dotnet nuget add source https://nuget.pkg.github.com/your-repo/index.json \
     --password YOUR_PAT
 
 # Install pre-release version
-dotnet add package AzureAISDK --version 1.0.0-alpha.* --source github
+dotnet add package AzureImage --version 1.0.0-alpha.* --source github
 ```
 
 ## Verify Installation
@@ -56,8 +56,8 @@ dotnet add package AzureAISDK --version 1.0.0-alpha.* --source github
 Create a simple console application to verify the installation:
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 
 namespace VerifyInstallation;
 
@@ -73,7 +73,7 @@ class Program
         // Create client
         using var client = AzureAIClient.Create();
 
-        Console.WriteLine($"✅ Azure AI SDK installed successfully!");
+        Console.WriteLine($"✅ Azure Image SDK installed successfully!");
         Console.WriteLine($"📦 SDK Version: 1.0.0");
         Console.WriteLine($"🎯 Model: {model.ModelName}");
         Console.WriteLine($"🔗 Endpoint: {model.Endpoint}");
@@ -94,7 +94,7 @@ class Program
 
 #### Package Not Found
 ```
-error NU1101: Unable to find package 'AzureAISDK'
+error NU1101: Unable to find package 'AzureImage'
 ```
 
 **Solution**: Ensure you're using a package source that has the package:
@@ -103,7 +103,7 @@ error NU1101: Unable to find package 'AzureAISDK'
 
 #### Framework Compatibility
 ```
-error NU1202: Package AzureAISDK is not compatible with netcoreapp3.1
+error NU1202: Package AzureImage is not compatible with netcoreapp3.1
 ```
 
 **Solution**: Upgrade to .NET 6.0 or later:
@@ -119,6 +119,6 @@ dotnet restore
 
 ### Getting Help
 
-- 📖 [Documentation](https://github.com/your-repo/AzureAISDK/wiki)
-- 🐛 [Report Issues](https://github.com/your-repo/AzureAISDK/issues)
-- 💬 [Ask Questions](https://github.com/your-repo/AzureAISDK/discussions) 
+- 📖 [Documentation](https://github.com/your-repo/AzureImage/wiki)
+- 🐛 [Report Issues](https://github.com/your-repo/AzureImage/issues)
+- 💬 [Ask Questions](https://github.com/your-repo/AzureImage/discussions) 

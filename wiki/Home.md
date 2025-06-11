@@ -1,10 +1,10 @@
-# Azure AI SDK Wiki
+# Azure Image SDK Wiki
 
-Welcome to the Azure AI SDK documentation! This SDK provides a comprehensive .NET solution for integrating with Azure AI services using a modern model-based architecture.
+Welcome to the Azure Image SDK documentation! This SDK provides a comprehensive .NET solution for integrating with Azure AI services using a modern model-based architecture.
 
 ## 🏗️ Architecture Overview
 
-The Azure AI SDK follows a **model-based architecture** where each AI model has its own configuration, parameters, and capabilities. This design provides:
+The Azure Image SDK follows a **model-based architecture** where each AI model has its own configuration, parameters, and capabilities. This design provides:
 
 - **🎯 Model Independence**: Each model can have different endpoints, API versions, and parameters
 - **🔧 Flexible Configuration**: Per-model timeouts, retry policies, and settings
@@ -48,8 +48,8 @@ The Azure AI SDK follows a **model-based architecture** where each AI model has 
 ## 🚀 Quick Example
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 
 // Create model with configuration
 var model = StableImageUltraModel.Create(
@@ -91,6 +91,6 @@ await response.SaveImageAsync("sunset.png");
 
 ## 🆘 Support
 
-- 📖 [Documentation](https://github.com/your-repo/AzureAISDK/wiki)
-- 🐛 [Issue Tracker](https://github.com/your-repo/AzureAISDK/issues)
-- 💬 [Discussions](https://github.com/your-repo/AzureAISDK/discussions) 
+- 📖 [Documentation](https://github.com/your-repo/AzureImage/wiki)
+- 🐛 [Issue Tracker](https://github.com/your-repo/AzureImage/issues)
+- 💬 [Discussions](https://github.com/your-repo/AzureImage/discussions) 

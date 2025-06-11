@@ -1,5 +1,5 @@
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Models.StableImageUltra;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -153,7 +153,7 @@ class Program
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
             // Create client
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             Console.Write("Enter your prompt: ");
             var prompt = Console.ReadLine();
@@ -200,7 +200,7 @@ class Program
                 endpoint: _configuration!["StableImageUltra:Endpoint"]!,
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             Console.Write("Enter your prompt: ");
             var prompt = Console.ReadLine();
@@ -273,7 +273,7 @@ class Program
                 endpoint: _configuration!["StableImageUltra:Endpoint"]!,
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             var prompt = "A cozy cottage in an enchanted forest with glowing mushrooms";
             var seed = 12345;
@@ -346,7 +346,7 @@ class Program
                 endpoint: _configuration!["StableImageUltra:Endpoint"]!,
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             if (choice == "0")
             {
@@ -460,7 +460,7 @@ class Program
                 endpoint: _configuration!["StableImageUltra:Endpoint"]!,
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             Console.WriteLine($"\n🔄 Generating {selectedSize} image...");
 
@@ -518,7 +518,7 @@ class Program
                 endpoint: _configuration!["StableImageUltra:Endpoint"]!,
                 apiKey: _configuration!["StableImageUltra:ApiKey"]!);
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             var tasks = prompts.Select(async (prompt, index) =>
             {
@@ -623,7 +623,7 @@ class Program
                     return;
             }
 
-            using var client = AzureAIClient.Create();
+            using var client = AzureImageClient.Create();
 
             Console.WriteLine($"📝 Model: {model.ModelName}");
             Console.WriteLine($"📐 Default Size: {model.DefaultSize}");

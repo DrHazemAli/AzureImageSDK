@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\AzureAISDK\AzureAISDK.csproj" />
+    <ProjectReference Include="..\..\..\src\AzureImage\AzureImage.csproj" />
   </ItemGroup>
 
   <ItemGroup>

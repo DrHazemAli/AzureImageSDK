@@ -1,5 +1,5 @@
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Models.StableImageUltra;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -69,12 +69,12 @@ class Program
         try
         {
             // Create the Azure AI client
-            using var client = AzureAIClient.Create(loggerFactory);
+            using var client = AzureImageClient.Create(loggerFactory);
 
             // Create StableImageUltra model with configuration
             var model = StableImageUltraModel.Create(
-                endpoint: configuration["AzureAI:StableImageUltra:Endpoint"]!,
-                apiKey: configuration["AzureAI:StableImageUltra:ApiKey"]!,
+                endpoint: configuration["AzureImage:StableImageUltra:Endpoint"]!,
+                apiKey: configuration["AzureImage:StableImageUltra:ApiKey"]!,
                 options =>
                 {
                     options.ApiVersion = "2024-05-01-preview";
@@ -121,12 +121,12 @@ class Program
 
         try
         {
-            using var client = AzureAIClient.Create(loggerFactory);
+            using var client = AzureImageClient.Create(loggerFactory);
 
             // Create model with advanced configuration
             var model = StableImageUltraModel.Create(
-                endpoint: configuration["AzureAI:StableImageUltra:Endpoint"]!,
-                apiKey: configuration["AzureAI:StableImageUltra:ApiKey"]!,
+                endpoint: configuration["AzureImage:StableImageUltra:Endpoint"]!,
+                apiKey: configuration["AzureImage:StableImageUltra:ApiKey"]!,
                 options =>
                 {
                     options.ModelName = "Stable-Image-Ultra-v2"; // Custom model version
@@ -189,12 +189,12 @@ class Program
 
         try
         {
-            using var client = AzureAIClient.Create(loggerFactory);
+            using var client = AzureImageClient.Create(loggerFactory);
 
             // Model 1: High quality, slower
             var highQualityModel = StableImageUltraModel.Create(
-                endpoint: configuration["AzureAI:StableImageUltra:Endpoint"]!,
-                apiKey: configuration["AzureAI:StableImageUltra:ApiKey"]!,
+                endpoint: configuration["AzureImage:StableImageUltra:Endpoint"]!,
+                apiKey: configuration["AzureImage:StableImageUltra:ApiKey"]!,
                 options =>
                 {
                     options.ModelName = "Stable-Image-Ultra-HQ";
@@ -206,8 +206,8 @@ class Program
 
             // Model 2: Fast generation, lower quality
             var fastModel = StableImageUltraModel.Create(
-                endpoint: configuration["AzureAI:StableImageUltra:Endpoint"]!,
-                apiKey: configuration["AzureAI:StableImageUltra:ApiKey"]!,
+                endpoint: configuration["AzureImage:StableImageUltra:Endpoint"]!,
+                apiKey: configuration["AzureImage:StableImageUltra:ApiKey"]!,
                 options =>
                 {
                     options.ModelName = "Stable-Image-Ultra-Fast";

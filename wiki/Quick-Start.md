@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get up and running with the Azure AI SDK in minutes! This guide will walk you through your first image generation using StableImageUltra.
+Get up and running with the Azure Image SDK in minutes! This guide will walk you through your first image generation using StableImageUltra.
 
 ## Prerequisites
 
@@ -12,12 +12,12 @@ Get up and running with the Azure AI SDK in minutes! This guide will walk you th
 
 ### Using Package Manager Console
 ```powershell
-Install-Package AzureAISDK
+Install-Package AzureImage
 ```
 
 ### Using .NET CLI
 ```bash
-dotnet add package AzureAISDK
+dotnet add package AzureImage
 ```
 
 ## Step 2: Create Your First Application
@@ -27,7 +27,7 @@ Create a new console application:
 ```bash
 dotnet new console -n MyFirstAzureAI
 cd MyFirstAzureAI
-dotnet add package AzureAISDK
+dotnet add package AzureImage
 ```
 
 ## Step 3: Generate Your First Image
@@ -35,8 +35,8 @@ dotnet add package AzureAISDK
 Replace the contents of `Program.cs`:
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 
 // Your Azure AI service details
 string endpoint = "https://your-endpoint.eastus.models.ai.azure.com";
@@ -116,8 +116,8 @@ dotnet add package Microsoft.Extensions.Configuration.Json
 Update your `Program.cs` to use configuration:
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 using Microsoft.Extensions.Configuration;
 
 // Build configuration
@@ -282,7 +282,7 @@ Make sure your endpoint URL and API key are correct:
 - 🎯 [StableImageUltra Guide](models/image-generation/StableImageUltra.md)
 - 🔧 [Configuration Guide](Configuration.md)
 - 🚀 [Sample Projects](examples/Sample-Projects.md)
-- 🐛 [Issue Tracker](https://github.com/your-repo/AzureAISDK/issues)
+- 🐛 [Issue Tracker](https://github.com/your-repo/AzureImage/issues)
 
 ## What's Next?
 
@@ -291,4 +291,4 @@ Make sure your endpoint URL and API key are correct:
 3. **[Read the Architecture Guide](architecture/Model-Based-Architecture.md)** - Understand the SDK design
 4. **[Check Best Practices](Error-Handling.md)** - Learn production-ready patterns
 
-Congratulations! 🎉 You've successfully generated your first AI image with the Azure AI SDK! 
+Congratulations! 🎉 You've successfully generated your first AI image with the Azure Image SDK! 

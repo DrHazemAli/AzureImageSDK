@@ -1,6 +1,6 @@
 # StableImageUltra Model
 
-StableImageUltra is a powerful image generation model that creates high-quality images from text prompts. This guide covers everything you need to know about using StableImageUltra with the Azure AI SDK.
+StableImageUltra is a powerful image generation model that creates high-quality images from text prompts. This guide covers everything you need to know about using StableImageUltra with the Azure Image SDK.
 
 ## Overview
 
@@ -14,8 +14,8 @@ StableImageUltra provides advanced image generation capabilities with support fo
 ## Quick Start
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 
 // Create model
 var model = StableImageUltraModel.Create(

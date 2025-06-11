@@ -1,11 +1,11 @@
-# Azure AI SDK
+# Azure Image SDK
 
-[![NuGet](https://img.shields.io/nuget/v/AzureAISDK.svg)](https://www.nuget.org/packages/AzureAISDK/)
-[![GitHub](https://img.shields.io/github/license/your-repo/AzureAISDK)](LICENSE)
-[![Build Status](https://github.com/your-repo/AzureAISDK/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/your-repo/AzureAISDK/actions)
-[![codecov](https://codecov.io/gh/your-repo/AzureAISDK/branch/main/graph/badge.svg)](https://codecov.io/gh/your-repo/AzureAISDK)
+[![NuGet](https://img.shields.io/nuget/v/AzureImage.svg)](https://www.nuget.org/packages/AzureImage/)
+[![GitHub](https://img.shields.io/github/license/your-repo/AzureImage)](LICENSE)
+[![Build Status](https://github.com/your-repo/AzureImage/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/your-repo/AzureImage/actions)
+[![codecov](https://codecov.io/gh/your-repo/AzureImage/branch/main/graph/badge.svg)](https://codecov.io/gh/your-repo/AzureImage)
 
-A comprehensive .NET SDK for Azure AI Foundry services, providing easy-to-use client libraries for AI capabilities including image generation with Stable Image Ultra and more.
+A comprehensive .NET SDK for Azure Image services, providing easy-to-use client libraries for image generation capabilities including Stable Image Ultra, Stable Image Core and more.
 
 ## Features
 
@@ -23,17 +23,17 @@ A comprehensive .NET SDK for Azure AI Foundry services, providing easy-to-use cl
 
 ### Package Manager
 ```powershell
-Install-Package AzureAISDK
+Install-Package AzureImage
 ```
 
 ### .NET CLI
 ```bash
-dotnet add package AzureAISDK
+dotnet add package AzureImage
 ```
 
 ### PackageReference
 ```xml
-<PackageReference Include="AzureAISDK" Version="1.0.0" />
+<PackageReference Include="AzureImage" Version="1.0.0" />
 ```
 
 ## Supported Frameworks
@@ -47,11 +47,11 @@ dotnet add package AzureAISDK
 ### Simple Usage
 
 ```csharp
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Models.StableImageUltra;
 
-// Create the Azure AI client
-using var client = AzureAIClient.Create();
+// Create the Azure Image client
+using var client = AzureImageClient.Create();
 
 // Create StableImageUltra model with configuration
 var model = StableImageUltraModel.Create(
@@ -76,7 +76,7 @@ await response.SaveImageAsync("sunset.png");
 ### Advanced Usage with Custom Parameters
 
 ```csharp
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Inference.Models.StableImageUltra;
 
 // Create model with custom configuration
 var model = StableImageUltraModel.Create(
@@ -119,10 +119,10 @@ if (response.Metadata != null)
 ### ASP.NET Core / .NET Host
 
 ```csharp
-using AzureAISDK.Extensions;
+using AzureImage.Extensions;
 
 // In Program.cs or Startup.cs
-services.AddAzureAI(options =>
+services.AddAzureImage(options =>
 {
     options.Endpoint = "https://your-endpoint.eastus.models.ai.azure.com";
     options.ApiKey = "your-api-key";
@@ -131,7 +131,7 @@ services.AddAzureAI(options =>
 });
 
 // Or from configuration
-services.AddAzureAI(configuration.GetSection("AzureAI"));
+services.AddAzureImage(configuration.GetSection("AzureImage"));
 ```
 
 ### Using in Controllers/Services
@@ -140,11 +140,11 @@ services.AddAzureAI(configuration.GetSection("AzureAI"));
 [ApiController]
 public class ImageController : ControllerBase
 {
-    private readonly IAzureAIClient _azureAIClient;
+    private readonly IAzureImageClient _azureImageClient;
 
-    public ImageController(IAzureAIClient azureAIClient)
+    public ImageController(IAzureImageClient azureImageClient)
     {
-        _azureAIClient = azureAIClient;
+        _azureImageClient = azureImageClient;
     }
 
     [HttpPost("generate")]
@@ -162,7 +162,7 @@ public class ImageController : ControllerBase
 
 ```json
 {
-  "AzureAI": {
+  "AzureImage": {
     "StableImageUltra": {
       "Endpoint": "https://your-stable-image-ultra-endpoint.eastus.models.ai.azure.com",
       "ApiKey": "your-stable-image-ultra-api-key-here"
@@ -172,7 +172,7 @@ public class ImageController : ControllerBase
     "LogLevel": {
       "Default": "Information",
       "Microsoft": "Warning",
-      "AzureAISDK": "Debug"
+      "AzureImage": "Debug"
     }
   }
 }
@@ -181,8 +181,8 @@ public class ImageController : ControllerBase
 ### Environment Variables
 
 ```bash
-export AZURE_AI_STABLE_IMAGE_ULTRA_ENDPOINT="https://your-endpoint.eastus.models.ai.azure.com"
-export AZURE_AI_STABLE_IMAGE_ULTRA_API_KEY="your-api-key"
+export AZURE_IMAGE_STABLE_IMAGE_ULTRA_ENDPOINT="https://your-endpoint.eastus.models.ai.azure.com"
+export AZURE_IMAGE_STABLE_IMAGE_ULTRA_API_KEY="your-api-key"
 ```
 
 ### Model Configuration in Code
@@ -278,9 +278,9 @@ try
 {
     var response = await client.StableImageUltra.GenerateImageAsync("prompt");
 }
-catch (AzureAIException ex)
+catch (AzureImageException ex)
 {
-    Console.WriteLine($"Azure AI Error: {ex.Message}");
+    Console.WriteLine($"Azure Image Error: {ex.Message}");
     Console.WriteLine($"Error Code: {ex.ErrorCode}");
     Console.WriteLine($"Status Code: {ex.StatusCode}");
 }
@@ -306,7 +306,7 @@ services.AddLogging(builder =>
 });
 
 // The SDK will automatically use the configured logger
-services.AddAzureAI(configuration.GetSection("AzureAI"));
+services.AddAzureImage(configuration.GetSection("AzureImage"));
 ```
 
 ## Authentication
@@ -375,9 +375,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 [Documentation](https://github.com/your-repo/AzureAISDK/wiki)
-- 🐛 [Issue Tracker](https://github.com/your-repo/AzureAISDK/issues)
-- 💬 [Discussions](https://github.com/your-repo/AzureAISDK/discussions)
+- 📖 [Documentation](https://github.com/your-repo/AzureImage/wiki)
+- 🐛 [Issue Tracker](https://github.com/your-repo/AzureImage/issues)
+- 💬 [Discussions](https://github.com/your-repo/AzureImage/discussions)
 
 ## Acknowledgments
 

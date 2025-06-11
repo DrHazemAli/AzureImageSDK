@@ -1,6 +1,6 @@
 # Model-Based Architecture
 
-The Azure AI SDK is built around a **model-based architecture** that provides flexibility, scalability, and type safety. This guide explains the design principles and benefits of this approach.
+The Azure Image SDK is built around a **model-based architecture** that provides flexibility, scalability, and type safety. This guide explains the design principles and benefits of this approach.
 
 ## Architecture Overview
 
@@ -362,8 +362,8 @@ services.AddSingleton<IAzureAIClient, AzureAIClient>();
 ### 4. Model-Specific Namespaces
 ```csharp
 // ✅ Good: Import model-specific namespaces
-using AzureAISDK.Core;
-using AzureAISDK.Inference.Image.StableImageUltra;
+using AzureImage.Core;
+using AzureImage.Inference.Image.StableImageUltra;
 
 // All StableImageUltra types are available
 var model = StableImageUltraModel.Create(/* ... */);
