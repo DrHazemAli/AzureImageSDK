@@ -105,9 +105,15 @@ public class ModelHttpClientService : IDisposable
         var uriBuilder = new UriBuilder(uri);
         
         // Add API version query parameter
-        var query = System.Web.HttpUtility.ParseQueryString(uriBuilder.Query);
-        query["api-version"] = model.ApiVersion;
-        uriBuilder.Query = query.ToString();
+        if (string.IsNullOrEmpty(uriBuilder.Query))
+        {
+            uriBuilder.Query = $"api-version={Uri.EscapeDataString(model.ApiVersion)}";
+        }
+        else
+        {
+            var existingQuery = uriBuilder.Query.TrimStart('?');
+            uriBuilder.Query = $"{existingQuery}&api-version={Uri.EscapeDataString(model.ApiVersion)}";
+        }
 
         var finalUri = uriBuilder.Uri;
 
