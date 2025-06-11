@@ -365,16 +365,6 @@ dotnet run
 - Update documentation for API changes
 - Ensure all tests pass before submitting PR
 
-## Roadmap
-
-- [ ] Support for additional Azure AI services
-- [ ] Authentication with Azure AD/Managed Identity
-- [ ] Batch image generation
-- [ ] Image-to-image generation
-- [ ] Streaming responses
-- [ ] Configuration validation
-- [ ] Performance optimizations
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
