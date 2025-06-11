@@ -1,3 +1,4 @@
+using System;
 using AzureImage.Inference.Models;
 
 namespace AzureImage.Inference.Models.StableImageUltra;
