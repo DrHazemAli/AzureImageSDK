@@ -50,7 +50,7 @@ Add the following to your project file:
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="AzureImage" Version="1.0.0" />
+    <PackageReference Include="AzureImage" Version="1.0.1" />
 </ItemGroup>
 ```
 

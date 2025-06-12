@@ -131,7 +131,7 @@ public class ModelHttpClientService : IDisposable
                 
                 // Set headers per-request to avoid conflicts between different models
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", model.ApiKey);
-                request.Headers.Add("User-Agent", "AzureImage/1.0.0");
+                request.Headers.Add("User-Agent", "AzureImage/1.0.1");
                 
                 if (content != null)
                 {
