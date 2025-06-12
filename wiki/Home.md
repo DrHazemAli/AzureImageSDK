@@ -30,6 +30,8 @@ AzureImage SDK is a .NET library that enables developers to easily integrate Azu
 
 - [StableImageUltra](Models/StableImageUltra/Overview.md)
 - [StableImageCore](Models/StableImageCore/Overview.md)
+- [GPT-Image-1](Models/GPT-Image-1/Overview.md)
+- [DALL-E 3](Models/DALL-E-3/Overview.md)
 
 ## Installation
 

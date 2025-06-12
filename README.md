@@ -1,52 +1,99 @@
 # Azure Image SDK
 
+<div align="center">
+
 [![NuGet](https://img.shields.io/nuget/v/AzureImage.svg)](https://www.nuget.org/packages/AzureImage/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/AzureImage.svg)](https://www.nuget.org/packages/AzureImage/)
 [![GitHub](https://img.shields.io/github/license/DrHazemAli/AzureImageSDK)](LICENSE)
 [![Wiki](https://img.shields.io/badge/docs-wiki-blue.svg)](https://github.com/DrHazemAli/AzureImageSDK/wiki)
+[![Changelog](https://img.shields.io/badge/changelog-releases-green.svg)](CHANGELOG.md)
+[![.NET](https://img.shields.io/badge/.NET-6.0%2B-512BD4)](https://dotnet.microsoft.com/)
 
-A comprehensive .NET SDK for Azure Image services, providing easy-to-use client libraries for image generation capabilities including Stable Image Ultra, Stable Image Core and more.
+**A powerful, comprehensive .NET SDK for Azure AI Foundry image services**
+
+*Seamlessly integrate advanced AI-powered image generation, analysis, and processing capabilities into your applications*
 
 ![Azure Image SDK](https://raw.githubusercontent.com/DrHazemAli/AzureImageSDK/refs/heads/main/azure_image_sdk.jpg)
 
+[**🚀 Quick Start**](#quick-start) • [**📖 Documentation**](https://github.com/DrHazemAli/AzureImageSDK/wiki) • [**🔧 API Reference**](#comprehensive-api-reference) • [**💬 Discussions**](https://github.com/DrHazemAli/AzureImageSDK/discussions)
 
-Azure Image SDK is a .NET library that enables developers to easily integrate Azure AI Foundry's image capabilities into their applications. The SDK supports .NET 6.0 and above, providing a modern and efficient way to work with AI-powered image generation and manipulation.
+</div>
 
+---
 
-## Features
+## 🌟 **What's New in v1.0.1**
 
-### 🎨 AI-Powered Image Generation
-- **Stable Image Ultra** - Advanced image generation with customizable parameters, high-quality outputs
-- **Stable Image Core** - Core image generation capabilities with essential features
-- **Configurable Parameters** - Custom sizes, prompts, seeds, output formats, and more
+- ✨ **NEW: DALL-E 3 Support** - Advanced OpenAI image generation with natural and vivid styles
+- ✨ **NEW: GPT-Image-1 Support** - Next-generation image generation and editing capabilities  
+- 🔧 **Enhanced Utilities** - Comprehensive image processing toolset with quality analysis
+- 📚 **Complete Documentation** - Detailed wikis for all utilities and features
+- 📦 **NuGet Enhancements** - README now included in NuGet package
 
-### 👁️ Computer Vision & AI Analysis
-- **Azure Vision Captioning** - Generate descriptive captions for images using Azure AI Vision
-- **Dense Captioning** - Generate multiple region-specific captions with bounding boxes
-- **Multi-Input Support** - Analyze images from streams, URLs, or file paths
-- **Language Support** - Multiple language options for captions
-- **Gender-Neutral Options** - Configurable gender-neutral caption generation
+> 📝 **[View complete changelog](CHANGELOG.md)** for detailed release notes and migration guides.
 
-### 🛠️ Image Processing Utilities
-- **Format Conversion** - Convert between image formats (PNG, JPG, WEBP, etc.) and MIME types
-- **Quality Analysis** - Analyze image sharpness, brightness, contrast, and overall quality scores
-- **Metadata Extraction** - Extract comprehensive image metadata (dimensions, format, properties)
-- **Size Validation** - Validate image dimensions and file sizes with customizable limits
-- **Aspect Ratio Tools** - Convert and validate aspect ratios for different use cases
+---
 
-### 🏗️ Architecture & Infrastructure
-- **Modular Design** - Easy to extend with new AI services and models
-- **Dependency Injection** - Full support for .NET DI container and ASP.NET Core
-- **Retry Logic** - Built-in exponential backoff retry mechanism with configurable policies
-- **Error Handling** - Comprehensive exception handling with detailed error information
-- **Logging Integration** - Structured logging with Microsoft.Extensions.Logging
-- **Type Safety** - Strongly typed models, requests, and responses throughout
-- **Async/Await** - Fully asynchronous API for optimal performance
-- **Configuration Flexible** - Support for appsettings.json, environment variables, and code-based config
-- **Well Tested** - Comprehensive unit test coverage across all components
+## 🎯 **Overview**
 
-## Installation
+Azure Image SDK is a modern, feature-rich .NET library that enables developers to easily integrate Azure AI Foundry's cutting-edge image capabilities into their applications. Supporting .NET 6.0+, it provides a unified, type-safe, and performant way to work with multiple AI-powered image services.
 
-### Package Manager
+### ⚡ **Why Choose Azure Image SDK?**
+
+- 🎨 **Multi-Model Support** - Unified API for Stable Image Ultra/Core, DALL-E 3, and GPT-Image-1
+- 🛠️ **Rich Utilities** - Complete image processing toolkit built-in
+- 🔌 **DI Ready** - First-class dependency injection support
+- 🔄 **Resilient** - Built-in retry logic and comprehensive error handling
+- 📊 **Observable** - Integrated logging and monitoring capabilities
+- 🧪 **Well Tested** - Comprehensive test coverage for production reliability
+
+---
+
+## ✨ **Features**
+
+### 🎨 **AI-Powered Image Generation**
+| Model | Capabilities | Best For |
+|-------|-------------|----------|
+| **🚀 DALL-E 3** | Natural & vivid styles, high-quality outputs | Creative projects, marketing content |
+| **⚡ GPT-Image-1** | Generation + editing, multiple formats | Versatile applications, content editing |
+| **🎯 Stable Image Ultra** | Advanced customization, precise control | Professional workflows, branded content |
+| **💎 Stable Image Core** | Essential generation, fast processing | High-volume applications, prototyping |
+
+#### **Key Generation Features**
+- 🎛️ **Advanced Parameters** - Size, style, quality, seeds, negative prompts
+- 🔄 **Multiple Formats** - PNG, JPEG, WebP support
+- 📐 **Flexible Sizing** - Square, landscape, portrait orientations
+- 🎭 **Style Control** - Natural, vivid, artistic variations
+- 🌱 **Reproducible** - Seed-based generation for consistency
+
+### 👁️ **Computer Vision & AI Analysis**
+- **🏷️ Azure Vision Captioning** - Generate descriptive captions with confidence scores
+- **🎯 Dense Captioning** - Multiple region-specific captions with bounding boxes
+- **🌐 Multi-Input Support** - Process images from streams, URLs, or file paths
+- **🗣️ Language Support** - Multiple language options for international applications
+- **⚖️ Gender-Neutral Options** - Inclusive captioning for diverse content
+
+### 🛠️ **Professional Image Processing Utilities**
+- **🔄 Format Conversion** - Universal format and MIME type conversion (PNG, JPG, WebP, etc.)
+- **📊 Quality Analysis** - Advanced sharpness, brightness, contrast, and overall quality scoring
+- **📋 Metadata Extraction** - Comprehensive EXIF data and image properties extraction
+- **📏 Size Validation** - Smart dimension validation with customizable constraints
+- **📐 Aspect Ratio Tools** - Professional aspect ratio calculation and validation
+
+### 🏗️ **Enterprise-Grade Architecture**
+- **🧩 Modular Design** - Easily extendable with new AI services and models
+- **💉 Dependency Injection** - Full ASP.NET Core and .NET Host integration
+- **🔄 Resilient Operations** - Exponential backoff retry with configurable policies
+- **🚨 Error Handling** - Comprehensive exception system with detailed diagnostics
+- **📝 Logging Integration** - Microsoft.Extensions.Logging with structured data
+- **🔒 Type Safety** - Strongly typed models, requests, and responses throughout
+- **⚡ Async/Await** - Fully asynchronous operations for optimal performance
+- **⚙️ Flexible Configuration** - appsettings.json, environment variables, and fluent APIs
+
+---
+
+## 📦 **Installation**
+
+### Package Manager Console
 ```powershell
 Install-Package AzureImage
 ```
@@ -58,68 +105,137 @@ dotnet add package AzureImage
 
 ### PackageReference
 ```xml
-<PackageReference Include="AzureImage" Version="1.0.0" />
+<PackageReference Include="AzureImage" Version="1.0.1" />
 ```
 
-## Supported Frameworks
+### Supported Frameworks
+- ✅ .NET 6.0+
+- ✅ .NET 7.0+  
+- ✅ .NET 8.0+
 
-- .NET 6.0+
-- .NET 7.0+
-- .NET 8.0+
+---
 
-## Quick Start
+## 🚀 **Quick Start**
 
-### 1. Image Generation - Simple Usage
+### 1. **🎨 Image Generation - DALL-E 3**
 
 ```csharp
 using AzureImage.Core;
-using AzureImage.Inference.Models.StableImageUltra;
+using AzureImage.Inference.Models.DALLE3;
 
-// Create the Azure Image client
-using var client = AzureImageClient.Create();
+// Create DALL-E 3 model
+var dalle3Model = DALLE3Model.Create(
+    endpoint: "https://your-resource.openai.azure.com",
+    apiKey: "your-api-key",
+    deploymentName: "dalle3-deployment");
 
-// Create StableImageUltra model with configuration
-var model = StableImageUltraModel.Create(
-    endpoint: "https://your-endpoint.eastus.models.ai.azure.com",
-    apiKey: "your-api-key");
-
-// Create model-specific request
+// Generate with advanced options
 var request = new ImageGenerationRequest
 {
-    Model = model.ModelName,
-    Prompt = "A beautiful sunset over mountains"
+    Prompt = "A majestic mountain landscape at sunset, painted in impressionist style",
+    Size = "1024x1024",
+    Quality = "hd",
+    Style = "vivid"
 };
 
-// Generate image using the model
-var response = await client.GenerateImageAsync<ImageGenerationRequest, ImageGenerationResponse>(
-    model, request);
+var response = await client.GenerateImageAsync(dalle3Model, request);
+await response.SaveImageAsync("masterpiece.png");
 
-// Save the image
-await response.SaveImageAsync("sunset.png");
+Console.WriteLine($"Generated with revised prompt: {response.RevisedPrompt}");
 ```
 
-### 2. Computer Vision - Image Captioning
+### 2. **⚡ Image Generation & Editing - GPT-Image-1**
 
 ```csharp
-using AzureImage.Core;
+using AzureImage.Inference.Models.GPTImage1;
+
+// Create GPT-Image-1 model (supports both generation and editing)
+var gptImageModel = GPTImage1Model.Create(
+    endpoint: "https://your-resource.openai.azure.com",
+    apiKey: "your-api-key", 
+    deploymentName: "gpt-image-1-deployment");
+
+// Generate new image
+var genRequest = new ImageGenerationRequest
+{
+    Prompt = "A modern office space with natural lighting",
+    Size = "1024x1024",
+    Quality = "high",
+    OutputFormat = "png"
+};
+
+var genResponse = await client.GenerateImageAsync(gptImageModel, genRequest);
+
+// Edit existing image
+var editRequest = new ImageEditingRequest
+{
+    Image = File.ReadAllBytes("original.png"),
+    Prompt = "Add a beautiful plant in the corner",
+    Size = "1024x1024"
+};
+
+var editResponse = await client.EditImageAsync(gptImageModel, editRequest);
+await editResponse.SaveImageAsync("edited.png");
+```
+
+### 3. **🎯 Professional Image Generation - Stable Image Ultra**
+
+```csharp
+using AzureImage.Inference.Models.StableImageUltra;
+
+// Create Stable Image Ultra model with advanced configuration
+var ultraModel = StableImageUltraModel.Create(
+    endpoint: "https://your-endpoint.eastus.models.ai.azure.com",
+    apiKey: "your-api-key",
+    options =>
+    {
+        options.ApiVersion = "2024-05-01-preview";
+        options.DefaultSize = "1024x1024";
+        options.DefaultOutputFormat = "png";
+        options.Timeout = TimeSpan.FromMinutes(5);
+        options.MaxRetryAttempts = 3;
+    });
+
+// Generate with fine-grained control
+var request = new ImageGenerationRequest
+{
+    Prompt = "A professional product photo of a luxury watch on marble surface",
+    NegativePrompt = "blurry, low quality, distorted, watermark",
+    Size = "1024x1024",
+    OutputFormat = "png",
+    Seed = 42 // For reproducible results
+};
+
+var response = await client.GenerateImageAsync(ultraModel, request);
+
+// Access comprehensive metadata
+if (response.Metadata != null)
+{
+    Console.WriteLine($"Generated: {response.Metadata.Width}x{response.Metadata.Height}");
+    Console.WriteLine($"Seed used: {response.Metadata.Seed}");
+    Console.WriteLine($"Format: {response.Metadata.Format}");
+}
+```
+
+### 4. **👁️ Computer Vision - Image Analysis**
+
+```csharp
 using AzureImage.Inference.Models.AzureVisionCaptioning;
 
-// Create Azure Vision captioning model
+// Create Azure Vision model
 var visionModel = AzureVisionCaptioningModel.Create(
-    endpoint: "https://your-vision-endpoint.cognitiveservices.azure.com",
+    endpoint: "https://your-vision.cognitiveservices.azure.com",
     apiKey: "your-vision-api-key");
 
-// Generate caption from image file
-using var imageStream = File.OpenRead("image.jpg");
-var captionResult = await visionModel.GenerateCaptionAsync(imageStream);
+// Analyze image from URL
+var captionResult = await visionModel.GenerateCaptionAsync(
+    "https://example.com/image.jpg");
 
 Console.WriteLine($"Caption: {captionResult.Caption.Text}");
 Console.WriteLine($"Confidence: {captionResult.Caption.Confidence:P2}");
 
-// Generate dense captions with regions
-var denseCaptions = await visionModel.GenerateDenseCaptionsAsync(
-    "https://example.com/image.jpg");
-
+// Generate detailed dense captions
+var denseCaptions = await visionModel.GenerateDenseCaptionsAsync(imageStream);
 foreach (var caption in denseCaptions.Captions)
 {
     Console.WriteLine($"Region: {caption.Text} (Confidence: {caption.Confidence:P2})");
@@ -127,104 +243,150 @@ foreach (var caption in denseCaptions.Captions)
 }
 ```
 
-### 3. Image Processing Utilities
+### 5. **🛠️ Professional Image Processing**
 
 ```csharp
 using AzureImage.Utilities;
 
-// Format conversion
+// Format conversion and validation
 string mimeType = ImageFormatConverter.GetMimeType(".jpg"); // "image/jpeg"
-string extension = ImageFormatConverter.GetFileExtension("image/png"); // ".png"
-bool isValid = ImageFormatConverter.IsValidImageFormat("webp"); // true
+bool isValidFormat = ImageFormatConverter.IsValidImageFormat("webp"); // true
+string[] supportedFormats = ImageFormatConverter.GetSupportedFormats();
 
-// Quality analysis
+// Comprehensive quality analysis
 using var imageStream = File.OpenRead("photo.jpg");
 var qualityMetrics = await ImageQualityAnalyzer.AnalyzeQualityAsync(imageStream);
-Console.WriteLine($"Sharpness: {qualityMetrics.Sharpness:P2}");
-Console.WriteLine($"Brightness: {qualityMetrics.Brightness:P2}");
-Console.WriteLine($"Overall Score: {qualityMetrics.OverallScore:P2}");
 
-// Metadata extraction
+Console.WriteLine($"📊 Quality Analysis:");
+Console.WriteLine($"   Sharpness: {qualityMetrics.Sharpness:P2}");
+Console.WriteLine($"   Brightness: {qualityMetrics.Brightness:P2}");
+Console.WriteLine($"   Contrast: {qualityMetrics.Contrast:P2}");
+Console.WriteLine($"   Overall Score: {qualityMetrics.OverallScore:P2}");
+
+// Extract detailed metadata
 var metadata = await ImageMetadataExtractor.ExtractMetadataAsync(imageStream);
-Console.WriteLine($"Dimensions: {metadata.Width}x{metadata.Height}");
-Console.WriteLine($"Format: {metadata.Format}");
+Console.WriteLine($"📋 Metadata:");
+Console.WriteLine($"   Dimensions: {metadata.Width}x{metadata.Height}");
+Console.WriteLine($"   Format: {metadata.Format}");
+Console.WriteLine($"   File Size: {metadata.Size:N0} bytes");
 
-// Size validation
-bool isValidSize = ImageSizeValidator.IsValidDimensions(1920, 1080, maxWidth: 2048, maxHeight: 2048);
-```
-
-### 4. Advanced Image Generation with Custom Parameters
-
-```csharp
-using AzureImage.Inference.Models.StableImageUltra;
-using AzureImage.Inference.Models.StableImageCore;
-
-// Stable Image Ultra with advanced options
-var ultraModel = StableImageUltraModel.Create(
-    endpoint: "https://your-endpoint.eastus.models.ai.azure.com",
-    apiKey: "your-api-key",
-    options =>
-    {
-        options.ApiVersion = "2024-05-01-preview";
-        options.ModelName = "Stable-Image-Ultra-v2";
-        options.DefaultSize = "1024x1024";
-        options.DefaultOutputFormat = "png";
-        options.Timeout = TimeSpan.FromMinutes(5);
-        options.MaxRetryAttempts = 3;
-    });
-
-// Stable Image Core for essential generation
-var coreModel = StableImageCoreModel.Create(
-    endpoint: "https://your-core-endpoint.eastus.models.ai.azure.com",
-    apiKey: "your-core-api-key");
-
-// Generate with multiple parameters
-var request = new ImageGenerationRequest
+// Smart size validation with constraints
+var constraints = new SizeConstraints
 {
-    Model = ultraModel.ModelName,
-    Prompt = "A futuristic cyberpunk cityscape",
-    NegativePrompt = "blurry, low quality",
-    Size = "1024x1024",
-    OutputFormat = "png",
-    Seed = 42
+    MinWidth = 320, MaxWidth = 1920,
+    MinHeight = 240, MaxHeight = 1080,
+    MinAspectRatio = 0.5, MaxAspectRatio = 2.0
 };
 
-var response = await client.GenerateImageAsync<ImageGenerationRequest, ImageGenerationResponse>(
-    ultraModel, request);
+bool isValidSize = ImageSizeValidator.IsWithinBounds(
+    metadata.Width, metadata.Height, constraints);
 
-// Access comprehensive metadata
-if (response.Metadata != null)
+// Intelligent scaling while preserving aspect ratio
+var (scaledWidth, scaledHeight) = ImageSizeValidator.ScaleToFit(
+    metadata.Width, metadata.Height, 1024, 1024);
+```
+
+---
+
+## ⚙️ **Configuration**
+
+### 📝 **appsettings.json Configuration**
+
+```json
 {
-    Console.WriteLine($"Generated with seed: {response.Metadata.Seed}");
-    Console.WriteLine($"Dimensions: {response.Metadata.Width}x{response.Metadata.Height}");
-    Console.WriteLine($"Format: {response.Metadata.Format}");
+  "AzureImage": {
+    "DALLE3": {
+      "Endpoint": "https://your-resource.openai.azure.com",
+      "ApiKey": "your-dalle3-api-key",
+      "DeploymentName": "dalle3-deployment",
+      "ApiVersion": "2024-02-01",
+      "DefaultSize": "1024x1024",
+      "DefaultQuality": "hd",
+      "DefaultStyle": "vivid"
+    },
+    "GPTImage1": {
+      "Endpoint": "https://your-resource.openai.azure.com", 
+      "ApiKey": "your-gpt-image-api-key",
+      "DeploymentName": "gpt-image-1-deployment",
+      "ApiVersion": "2025-04-01-preview",
+      "DefaultSize": "1024x1024",
+      "DefaultQuality": "high"
+    },
+    "StableImageUltra": {
+      "Endpoint": "https://your-stable-image-ultra.eastus.models.ai.azure.com",
+      "ApiKey": "your-stable-image-ultra-api-key",
+      "ApiVersion": "2024-05-01-preview",
+      "DefaultSize": "1024x1024",
+      "DefaultOutputFormat": "png"
+    },
+    "StableImageCore": {
+      "Endpoint": "https://your-stable-image-core.eastus.models.ai.azure.com",
+      "ApiKey": "your-stable-image-core-api-key"
+    },
+    "AzureVisionCaptioning": {
+      "Endpoint": "https://your-vision.cognitiveservices.azure.com",
+      "ApiKey": "your-vision-api-key",
+      "ApiVersion": "2024-02-01"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning", 
+      "AzureImage": "Debug"
+    }
+  }
 }
 ```
 
-## Dependency Injection
+### 🌐 **Environment Variables**
 
-### ASP.NET Core / .NET Host
+```bash
+# DALL-E 3
+export AZURE_IMAGE_DALLE3_ENDPOINT="https://your-resource.openai.azure.com"
+export AZURE_IMAGE_DALLE3_API_KEY="your-dalle3-api-key"
+export AZURE_IMAGE_DALLE3_DEPLOYMENT_NAME="dalle3-deployment"
+
+# GPT-Image-1  
+export AZURE_IMAGE_GPTIMAGE1_ENDPOINT="https://your-resource.openai.azure.com"
+export AZURE_IMAGE_GPTIMAGE1_API_KEY="your-gpt-image-api-key"
+export AZURE_IMAGE_GPTIMAGE1_DEPLOYMENT_NAME="gpt-image-1-deployment"
+
+# Stable Image Ultra
+export AZURE_IMAGE_STABLE_IMAGE_ULTRA_ENDPOINT="https://your-endpoint.eastus.models.ai.azure.com"
+export AZURE_IMAGE_STABLE_IMAGE_ULTRA_API_KEY="your-api-key"
+```
+
+### 💉 **Dependency Injection Setup**
 
 ```csharp
 using AzureImage.Extensions;
 
 // In Program.cs or Startup.cs
-services.AddAzureImage(options =>
+builder.Services.AddAzureImage(options =>
 {
-    options.Endpoint = "https://your-endpoint.eastus.models.ai.azure.com";
-    options.ApiKey = "your-api-key";
+    options.DALLE3.Endpoint = "https://your-resource.openai.azure.com";
+    options.DALLE3.ApiKey = "your-api-key";
+    options.DALLE3.DeploymentName = "dalle3-deployment";
+    
+    options.GPTImage1.Endpoint = "https://your-resource.openai.azure.com";
+    options.GPTImage1.ApiKey = "your-api-key";
+    options.GPTImage1.DeploymentName = "gpt-image-1-deployment";
+    
     options.Timeout = TimeSpan.FromMinutes(5);
     options.MaxRetryAttempts = 3;
 });
 
-// Or from configuration
-services.AddAzureImage(configuration.GetSection("AzureImage"));
+// Or load from configuration
+builder.Services.AddAzureImage(
+    builder.Configuration.GetSection("AzureImage"));
 ```
 
-### Using in Controllers/Services
+### 🎮 **Using in Controllers/Services**
 
 ```csharp
 [ApiController]
+[Route("api/[controller]")]
 public class ImageController : ControllerBase
 {
     private readonly IAzureImageClient _azureImageClient;
@@ -234,361 +396,490 @@ public class ImageController : ControllerBase
         _azureImageClient = azureImageClient;
     }
 
-    [HttpPost("generate")]
-    public async Task<IActionResult> GenerateImage([FromBody] GenerateImageRequest request)
+    [HttpPost("generate/dalle3")]
+    public async Task<IActionResult> GenerateWithDALLE3([FromBody] GenerateImageRequest request)
     {
-        var response = await _azureAIClient.StableImageUltra.GenerateImageAsync(request.Prompt);
-        return File(response.GetImageBytes(), "image/png");
+        var dalle3Model = DALLE3Model.Create(/* configuration */);
+        var response = await _azureImageClient.GenerateImageAsync(dalle3Model, request);
+        return File(response.GetImageBytes(), "image/png", "generated-image.png");
+    }
+
+    [HttpPost("edit/gpt-image")]
+    public async Task<IActionResult> EditWithGPTImage(IFormFile image, [FromForm] string prompt)
+    {
+        var gptImageModel = GPTImage1Model.Create(/* configuration */);
+        var editRequest = new ImageEditingRequest
+        {
+            Image = await image.GetBytesAsync(),
+            Prompt = prompt
+        };
+        
+        var response = await _azureImageClient.EditImageAsync(gptImageModel, editRequest);
+        return File(response.GetImageBytes(), "image/png", "edited-image.png");
     }
 }
 ```
 
-## Comprehensive API Reference
+---
 
-### 🎨 Image Generation Models
+## 📊 **Comprehensive API Reference**
 
-#### Stable Image Ultra API
+### 🎨 **Image Generation Models Comparison**
+
+| Feature | DALL-E 3 | GPT-Image-1 | Stable Image Ultra | Stable Image Core |
+|---------|----------|-------------|-------------------|-------------------|
+| **Generation** | ✅ Advanced | ✅ Advanced | ✅ Professional | ✅ Essential |
+| **Editing** | ❌ | ✅ Full Support | ❌ | ❌ |
+| **Styles** | Natural, Vivid | Multiple | Custom | Standard |
+| **Sizes** | 1024x1024, 1792x1024, 1024x1792 | 1024x1024, 1024x1536, 1536x1024 | Flexible | Flexible |
+| **Quality Options** | Standard, HD | Low, Medium, High | Custom | Standard |
+| **Batch Generation** | Single (n=1) | 1-10 images | Single | Single |
+| **Response Format** | URL, Base64 | PNG, JPEG | Multiple | Multiple |
+
+### 🎛️ **Model-Specific Parameters**
+
+#### **DALL-E 3 Parameters**
 ```csharp
-// Basic generation
-var response = await client.StableImageUltra.GenerateImageAsync("your prompt");
-
-// With parameters
-var response = await client.StableImageUltra.GenerateImageAsync(
-    prompt: "A serene landscape",
-    negativePrompt: "blurry, distorted",
-    size: "1024x1024",
-    outputFormat: "png",
-    seed: 12345
-);
-
-// With request object
-var request = new ImageGenerationRequest
+var request = new DALLE3.ImageGenerationRequest
 {
-    Prompt = "A detailed prompt",
-    NegativePrompt = "unwanted elements",
-    Size = "512x512",
-    OutputFormat = "jpg",
-    Seed = 42
+    Prompt = "Your creative prompt",
+    Size = "1024x1024", // 1024x1024, 1792x1024, 1024x1792
+    Quality = "hd",      // standard, hd
+    Style = "vivid",     // natural, vivid
+    ResponseFormat = "url" // url, b64_json
 };
-var response = await client.StableImageUltra.GenerateImageAsync(request);
 ```
 
-#### Stable Image Core API
+#### **GPT-Image-1 Parameters**
 ```csharp
-// Essential image generation
-var coreModel = StableImageCoreModel.Create(endpoint, apiKey);
-var response = await client.GenerateImageAsync(coreModel, request);
+// Generation
+var genRequest = new GPTImage1.ImageGenerationRequest
+{
+    Prompt = "Your detailed prompt",
+    Size = "1024x1024",     // 1024x1024, 1024x1536, 1536x1024
+    Quality = "high",       // low, medium, high  
+    N = 1,                  // 1-10 images
+    OutputFormat = "png",   // png, jpeg
+    OutputCompression = 100, // 0-100
+    User = "user-123"       // Optional user ID
+};
+
+// Editing
+var editRequest = new GPTImage1.ImageEditingRequest
+{
+    Image = imageBytes,     // Original image as byte array
+    Mask = maskBytes,       // Optional mask (PNG, same dimensions)
+    Prompt = "Edit description",
+    Size = "1024x1024",
+    Quality = "high"
+};
 ```
 
-### 👁️ Computer Vision APIs
-
-#### Azure Vision Captioning
+#### **Stable Image Ultra Parameters**
 ```csharp
-// Single caption generation
+var request = new StableImageUltra.ImageGenerationRequest
+{
+    Prompt = "Professional prompt",
+    NegativePrompt = "unwanted, blurry, low quality",
+    Size = "1024x1024",
+    OutputFormat = "png",   // png, jpg, jpeg, webp
+    Seed = 42               // For reproducible results
+};
+```
+
+### 👁️ **Computer Vision APIs**
+
+#### **Azure Vision Captioning**
+```csharp
+// Single caption
 var visionModel = AzureVisionCaptioningModel.Create(endpoint, apiKey);
-
-// From image stream
 var caption = await visionModel.GenerateCaptionAsync(imageStream);
-
-// From image URL
-var caption = await visionModel.GenerateCaptionAsync("https://example.com/image.jpg");
 
 // With options
 var options = new ImageCaptionOptions
 {
-    Language = "en",
-    GenderNeutralCaption = true
+    Language = "en",              // Language code
+    GenderNeutralCaption = true   // Inclusive language
 };
 var caption = await visionModel.GenerateCaptionAsync(imageStream, options);
-```
 
-#### Dense Captioning
-```csharp
-// Multiple region captions
+// Dense captioning (multiple regions)
 var denseCaptions = await visionModel.GenerateDenseCaptionsAsync(imageStream);
-
-foreach (var caption in denseCaptions.Captions)
-{
-    Console.WriteLine($"Caption: {caption.Text}");
-    Console.WriteLine($"Confidence: {caption.Confidence}");
-    Console.WriteLine($"Region: {caption.BoundingBox.X}, {caption.BoundingBox.Y}");
-}
 ```
 
-### 🛠️ Utility APIs
+### 🛠️ **Utility APIs Deep Dive**
 
-#### Image Format Conversion
+#### **📋 Image Format Converter**
 ```csharp
-// Convert formats
-string mimeType = ImageFormatConverter.GetMimeType(".jpg");
-string extension = ImageFormatConverter.GetFileExtension("image/jpeg");
-bool isValid = ImageFormatConverter.IsValidImageFormat("png");
-string[] supportedFormats = ImageFormatConverter.GetSupportedFormats();
+// Format detection and conversion
+string mimeType = ImageFormatConverter.GetMimeType(".jpg");         // "image/jpeg"
+string extension = ImageFormatConverter.GetFileExtension("image/png"); // ".png"
+bool isSupported = ImageFormatConverter.IsValidImageFormat("webp");    // true
+string[] formats = ImageFormatConverter.GetSupportedFormats();         // All supported
+string[] mimeTypes = ImageFormatConverter.GetSupportedMimeTypes();     // All MIME types
 ```
 
-#### Image Quality Analysis
+#### **📊 Image Quality Analyzer**
 ```csharp
-// Quality metrics
-var metrics = await ImageQualityAnalyzer.AnalyzeQualityAsync(imageStream);
-double sharpness = await ImageQualityAnalyzer.CalculateSharpnessAsync(imageStream);
-double brightness = await ImageQualityAnalyzer.CalculateBrightnessAsync(imageStream);
-double contrast = await ImageQualityAnalyzer.CalculateContrastAsync(imageStream);
+// Individual metrics
+double sharpness = await ImageQualityAnalyzer.CalculateSharpnessAsync(stream);   // 0.0-1.0
+double brightness = await ImageQualityAnalyzer.CalculateBrightnessAsync(stream); // 0.0-1.0  
+double contrast = await ImageQualityAnalyzer.CalculateContrastAsync(stream);     // 0.0-1.0
+
+// Comprehensive analysis
+var metrics = await ImageQualityAnalyzer.AnalyzeQualityAsync(stream);
+Console.WriteLine($"Overall Quality: {metrics.OverallScore:P2}");
 ```
 
-#### Image Metadata Extraction
+#### **📋 Image Metadata Extractor**  
 ```csharp
 // Extract comprehensive metadata
-var metadata = await ImageMetadataExtractor.ExtractMetadataAsync(imageStream);
-Console.WriteLine($"Size: {metadata.Width}x{metadata.Height}");
+var metadata = await ImageMetadataExtractor.ExtractMetadataAsync(filePath);
+Console.WriteLine($"Dimensions: {metadata.Width}x{metadata.Height}");
 Console.WriteLine($"Format: {metadata.Format}");
-Console.WriteLine($"File Size: {metadata.FileSizeBytes} bytes");
+Console.WriteLine($"File Size: {metadata.Size:N0} bytes");
+Console.WriteLine($"Created: {metadata.CreationDate}");
+
+// Validate metadata integrity
+bool hasValidMetadata = await ImageMetadataExtractor.HasValidMetadataAsync(stream);
 ```
 
-#### Image Size Validation
+#### **📏 Image Size Validator**
 ```csharp
-// Validate dimensions and sizes
-bool isValidDimension = ImageSizeValidator.IsValidDimensions(width, height);
-bool isValidFileSize = ImageSizeValidator.IsValidFileSize(fileSizeBytes);
-var validationResult = ImageSizeValidator.ValidateImage(imageStream);
-```
+// Simple validation
+bool isValid = ImageSizeValidator.IsValidSize(1920, 1080, 2048, 2048);
 
-#### Aspect Ratio Tools
-```csharp
-// Aspect ratio calculations
-double ratio = AspectRatioConverter.CalculateAspectRatio(1920, 1080);
-var dimensions = AspectRatioConverter.GetDimensionsForAspectRatio(16/9, 1920);
-bool isValid = AspectRatioConverter.IsValidAspectRatio(1.77, tolerance: 0.01);
-```
-
-## Configuration
-
-### appsettings.json
-
-```json
+// Advanced constraint validation
+var constraints = new SizeConstraints
 {
-  "AzureImage": {
-    "StableImageUltra": {
-      "Endpoint": "https://your-stable-image-ultra-endpoint.eastus.models.ai.azure.com",
-      "ApiKey": "your-stable-image-ultra-api-key-here",
-      "ApiVersion": "2024-05-01-preview",
-      "DefaultSize": "1024x1024",
-      "DefaultOutputFormat": "png"
-    },
-    "StableImageCore": {
-      "Endpoint": "https://your-stable-image-core-endpoint.eastus.models.ai.azure.com",
-      "ApiKey": "your-stable-image-core-api-key-here"
-    },
-    "AzureVisionCaptioning": {
-      "Endpoint": "https://your-vision-endpoint.cognitiveservices.azure.com",
-      "ApiKey": "your-vision-api-key-here",
-      "ApiVersion": "2024-02-01"
-    }
-  },
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "AzureImage": "Debug"
-    }
-  }
-}
-```
-
-### Environment Variables
-
-```bash
-export AZURE_IMAGE_STABLE_IMAGE_ULTRA_ENDPOINT="https://your-endpoint.eastus.models.ai.azure.com"
-export AZURE_IMAGE_STABLE_IMAGE_ULTRA_API_KEY="your-api-key"
-```
-
-### Model Configuration in Code
-
-```csharp
-// Basic configuration
-var model = StableImageUltraModel.Create(endpoint, apiKey);
-
-// Advanced configuration
-var model = StableImageUltraModel.Create(endpoint, apiKey, options =>
-{
-    options.ModelName = "Stable-Image-Ultra-v2";
-    options.ApiVersion = "2024-05-01-preview";
-    options.DefaultSize = "1024x1024";
-    options.DefaultOutputFormat = "png";
-    options.Timeout = TimeSpan.FromMinutes(5);
-    options.MaxRetryAttempts = 3;
-    options.RetryDelay = TimeSpan.FromSeconds(1);
-});
-```
-
-## Stable Image Ultra API
-
-### Available Methods
-
-#### Simple Generation
-```csharp
-var response = await client.StableImageUltra.GenerateImageAsync("your prompt");
-```
-
-#### With Parameters
-```csharp
-var response = await client.StableImageUltra.GenerateImageAsync(
-    prompt: "A serene landscape",
-    negativePrompt: "blurry, distorted",
-    size: "1024x1024",
-    outputFormat: "png",
-    seed: 12345
-);
-```
-
-#### With Request Object
-```csharp
-var request = new ImageGenerationRequest
-{
-    Prompt = "A detailed prompt",
-    NegativePrompt = "unwanted elements",
-    Size = "512x512",
-    OutputFormat = "jpg",
-    Seed = 42
+    MinWidth = 320, MaxWidth = 1920,
+    MinHeight = 240, MaxHeight = 1080,
+    MinAspectRatio = 0.5, MaxAspectRatio = 2.0
 };
+bool withinBounds = ImageSizeValidator.IsWithinBounds(width, height, constraints);
 
-var response = await client.StableImageUltra.GenerateImageAsync(request);
+// Intelligent scaling
+var (fitWidth, fitHeight) = ImageSizeValidator.ScaleToFit(3000, 2000, 1024, 1024);
+var (fillWidth, fillHeight) = ImageSizeValidator.ScaleToFill(1920, 1080, 800, 600);
 ```
 
-### Supported Parameters
+#### **📐 Aspect Ratio Converter** 
+```csharp
+// Calculate ratios
+double ratio = AspectRatioConverter.CalculateAspectRatio(1920, 1080);              // 1.777...
+var dimensions = AspectRatioConverter.GetDimensionsForAspectRatio(16.0/9.0, 1920); // (1920, 1080)
+bool isValid = AspectRatioConverter.IsValidAspectRatio(1.77, tolerance: 0.01);     // true
+```
 
-| Parameter | Type | Description | Default |
-|-----------|------|-------------|---------|
-| `Prompt` | `string` | Text description of the desired image | Required |
-| `NegativePrompt` | `string?` | What to avoid in the image | `null` |
-| `Size` | `string` | Image dimensions (e.g., "1024x1024") | `"1024x1024"` |
-| `OutputFormat` | `string` | Image format (png, jpg, jpeg, webp) | `"png"` |
-| `Seed` | `int?` | Seed for reproducible generation | `null` |
+---
 
-### Response Handling
+## 🔧 **Advanced Usage Examples**
+
+### 🎨 **Multi-Model Image Generation Pipeline**
 
 ```csharp
-var response = await client.StableImageUltra.GenerateImageAsync("prompt");
-
-// Get image as byte array
-byte[] imageBytes = response.GetImageBytes();
-
-// Save to file
-await response.SaveImageAsync("output.png");
-
-// Access metadata (if available)
-if (response.Metadata != null)
+public class ImageGenerationPipeline
 {
-    var width = response.Metadata.Width;
-    var height = response.Metadata.Height;
-    var format = response.Metadata.Format;
-    var seed = response.Metadata.Seed;
+    private readonly IAzureImageClient _client;
+    private readonly DALLE3Model _dalle3;
+    private readonly GPTImage1Model _gptImage1; 
+    private readonly StableImageUltraModel _stableUltra;
+
+    public async Task<GenerationResult> GenerateWithFallback(string prompt)
+    {
+        var strategies = new[]
+        {
+            (Model: _dalle3, Name: "DALL-E 3"),
+            (Model: _gptImage1, Name: "GPT-Image-1"), 
+            (Model: _stableUltra, Name: "Stable Image Ultra")
+        };
+
+        foreach (var (model, name) in strategies)
+        {
+            try
+            {
+                Console.WriteLine($"Attempting generation with {name}...");
+                var response = await _client.GenerateImageAsync(model, new { Prompt = prompt });
+                
+                // Analyze quality
+                using var stream = new MemoryStream(response.GetImageBytes());
+                var quality = await ImageQualityAnalyzer.AnalyzeQualityAsync(stream);
+                
+                if (quality.OverallScore > 0.7) // Quality threshold
+                {
+                    return new GenerationResult
+                    {
+                        Success = true,
+                        ModelUsed = name,
+                        ImageData = response.GetImageBytes(),
+                        QualityScore = quality.OverallScore
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{name} failed: {ex.Message}");
+            }
+        }
+
+        return new GenerationResult { Success = false };
+    }
 }
 ```
 
-## Error Handling
+### 📊 **Batch Image Quality Assessment**
 
-The SDK provides comprehensive error handling with custom exceptions:
+```csharp
+public class BatchImageProcessor
+{
+    public async Task<QualityReport> AnalyzeImageCollection(string[] imagePaths)
+    {
+        var results = new List<ImageAnalysisResult>();
+        var semaphore = new SemaphoreSlim(Environment.ProcessorCount); // Limit concurrency
+
+        var tasks = imagePaths.Select(async path =>
+        {
+            await semaphore.WaitAsync();
+            try
+            {
+                return await AnalyzeSingleImage(path);
+            }
+            finally
+            {
+                semaphore.Release();
+            }
+        });
+
+        var analysisResults = await Task.WhenAll(tasks);
+        
+        return new QualityReport
+        {
+            TotalImages = analysisResults.Length,
+            AverageQuality = analysisResults.Average(r => r.QualityScore),
+            HighQualityCount = analysisResults.Count(r => r.QualityScore > 0.8),
+            LowQualityImages = analysisResults
+                .Where(r => r.QualityScore < 0.5)
+                .Select(r => r.FilePath)
+                .ToList()
+        };
+    }
+
+    private async Task<ImageAnalysisResult> AnalyzeSingleImage(string path)
+    {
+        using var stream = File.OpenRead(path);
+        
+        // Extract metadata
+        var metadata = await ImageMetadataExtractor.ExtractMetadataAsync(stream);
+        
+        // Analyze quality
+        stream.Position = 0;
+        var quality = await ImageQualityAnalyzer.AnalyzeQualityAsync(stream);
+        
+        // Validate dimensions
+        var constraints = new SizeConstraints { MinWidth = 100, MaxWidth = 4096 };
+        bool validSize = ImageSizeValidator.IsWithinBounds(
+            metadata.Width, metadata.Height, constraints);
+
+        return new ImageAnalysisResult
+        {
+            FilePath = path,
+            Metadata = metadata,
+            QualityScore = quality.OverallScore,
+            IsValidSize = validSize,
+            Format = metadata.Format
+        };
+    }
+}
+```
+
+---
+
+## 🚨 **Error Handling & Diagnostics**
+
+The SDK provides comprehensive error handling with detailed diagnostics:
 
 ```csharp
 try
 {
-    var response = await client.StableImageUltra.GenerateImageAsync("prompt");
+    var response = await client.GenerateImageAsync(model, request);
 }
 catch (AzureImageException ex)
 {
-    Console.WriteLine($"Azure Image Error: {ex.Message}");
+    // Azure Image SDK specific errors
+    Console.WriteLine($"SDK Error: {ex.Message}");
     Console.WriteLine($"Error Code: {ex.ErrorCode}");
     Console.WriteLine($"Status Code: {ex.StatusCode}");
+    Console.WriteLine($"Request ID: {ex.RequestId}");
 }
 catch (ArgumentException ex)
 {
+    // Parameter validation errors
     Console.WriteLine($"Invalid parameters: {ex.Message}");
 }
 catch (HttpRequestException ex)
 {
+    // Network connectivity errors
     Console.WriteLine($"Network error: {ex.Message}");
+}
+catch (TaskCanceledException ex)
+{
+    // Timeout errors
+    Console.WriteLine($"Request timeout: {ex.Message}");
 }
 ```
 
-## Logging
-
-The SDK integrates with Microsoft.Extensions.Logging:
+### 📝 **Structured Logging**
 
 ```csharp
-services.AddLogging(builder =>
+// Configure logging in Program.cs
+builder.Services.AddLogging(logging =>
 {
-    builder.AddConsole();
-    builder.SetMinimumLevel(LogLevel.Information);
+    logging.AddConsole();
+    logging.AddApplicationInsights(); // Optional: Azure Application Insights
+    logging.SetMinimumLevel(LogLevel.Information);
 });
 
-// The SDK will automatically use the configured logger
-services.AddAzureImage(configuration.GetSection("AzureImage"));
+// The SDK automatically logs:
+// - Request/response details
+// - Performance metrics  
+// - Error diagnostics
+// - Quality analysis results
+// - Retry attempts
 ```
 
-## Authentication
+---
 
-Currently supports API key authentication. The API key should be obtained from your Azure AI service deployment.
+## 🧪 **Testing & Development**
 
-## Development
-
-### Prerequisites
-
-- .NET 8.0 SDK
-- Visual Studio 2022 or VS Code
-- Azure AI service with Stable Image Ultra deployment
-
-### Building
+### 📦 **Running the Samples**
 
 ```bash
-dotnet restore
-dotnet build
-```
+# Clone the repository
+git clone https://github.com/DrHazemAli/AzureImageSDK.git
+cd AzureImageSDK
 
-### Running Tests
-
-```bash
-dotnet test
-```
-
-### Running Sample
-
-1. Update `samples/SampleProject/appsettings.json` with your endpoint and API key
-2. Run the sample:
-
-```bash
+# Navigate to samples
 cd samples/SampleProject
+
+# Configure your API keys in appsettings.json
+# Then run the sample
 dotnet run
 ```
 
-## Contributing
+### 🔧 **Building from Source**
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+```bash
+# Restore dependencies
+dotnet restore
 
-### Development Guidelines
+# Build the solution
+dotnet build
 
-- Follow C# coding conventions
-- Write unit tests for new features
-- Update documentation for API changes
-- Ensure all tests pass before submitting PR
+# Run tests
+dotnet test
 
-## License
+# Create NuGet package
+dotnet pack --configuration Release
+```
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## Support
+## 📚 **Documentation & Resources**
 
-- 📖 [Documentation & Wiki](https://github.com/DrHazemAli/AzureImageSDK/wiki)
-- 📋 [Changelog](CHANGELOG.md)
-- 🐛 [Issue Tracker](https://github.com/DrHazemAli/AzureImageSDK/issues)
-- 💬 [Discussions](https://github.com/DrHazemAli/AzureImageSDK/discussions)
-- 🔗 [GitHub Repository](https://github.com/DrHazemAli/AzureImageSDK)
+| Resource | Description | Link |
+|----------|-------------|------|
+| 📖 **Wiki** | Comprehensive documentation and guides | [GitHub Wiki](https://github.com/DrHazemAli/AzureImageSDK/wiki) |
+| 🔧 **API Reference** | Detailed API documentation | [Wiki/API-Reference](https://github.com/DrHazemAli/AzureImageSDK/wiki/API-Reference) |
+| 🚀 **Getting Started** | Step-by-step setup guides | [Wiki/Getting-Started](https://github.com/DrHazemAli/AzureImageSDK/wiki/Getting-Started) |
+| 🛠️ **Utilities Guide** | Image processing utilities documentation | [Wiki/Utilities](https://github.com/DrHazemAli/AzureImageSDK/wiki/Utilities) |
+| 💡 **Best Practices** | Performance and security recommendations | [Wiki/Best-Practices](https://github.com/DrHazemAli/AzureImageSDK/wiki/Best-Practices) |
+| 🐛 **Troubleshooting** | Common issues and solutions | [Wiki/Troubleshooting](https://github.com/DrHazemAli/AzureImageSDK/wiki/Troubleshooting) |
+| 📝 **Changelog** | Release notes and migration guides | [CHANGELOG.md](CHANGELOG.md) |
 
-## Acknowledgments
+---
 
-- Azure AI team for providing the APIs
-- .NET community for excellent tooling and libraries
-- Contributors and users of this SDK
+## 🤝 **Contributing**
+
+We welcome contributions! Here's how you can help:
+
+### 🔧 **Development Setup**
+
+1. **Fork & Clone**
+   ```bash
+   git clone https://github.com/your-username/AzureImageSDK.git
+   cd AzureImageSDK
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   dotnet restore
+   ```
+
+3. **Create Feature Branch**
+   ```bash
+   git checkout -b feature/amazing-new-feature
+   ```
+
+4. **Make Changes & Test**
+   ```bash
+   dotnet build
+   dotnet test
+   ```
+
+5. **Submit Pull Request**
+
+### 📋 **Contribution Guidelines**
+
+- ✅ Follow C# coding conventions and best practices
+- ✅ Write comprehensive unit tests for new features  
+- ✅ Update documentation for API changes
+- ✅ Ensure all tests pass before submitting
+- ✅ Add entry to [CHANGELOG.md](CHANGELOG.md) for significant changes
+
+### 🐛 **Reporting Issues**
+
+Found a bug? Have a feature request? Please:
+
+1. **Search existing issues** to avoid duplicates
+2. **Use issue templates** for consistency
+3. **Provide detailed reproduction steps**
+4. **Include environment information** (.NET version, OS, etc.)
+
+---
+
+## 📄 **License**
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 **Acknowledgments**
+
+- **Azure AI Team** - For providing excellent AI APIs and documentation
+- **.NET Community** - For outstanding tooling, libraries, and ecosystem
+- **Contributors** - Everyone who has contributed code, documentation, or feedback
+- **Users** - The developers and organizations using this SDK in production
+
+---
+
+## 📞 **Support & Community**
+
+| Channel | Purpose | Link |
+|---------|---------|------|
+| 📖 **Documentation** | Comprehensive guides and API reference | [GitHub Wiki](https://github.com/DrHazemAli/AzureImageSDK/wiki) |
+| 🐛 **Issues** | Bug reports and feature requests | [GitHub Issues](https://github.com/DrHazemAli/AzureImageSDK/issues) |
+| 💬 **Discussions** | Q&A, ideas, and community chat | [GitHub Discussions](https://github.com/DrHazemAli/AzureImageSDK/discussions) |
+| 📝 **Changelog** | Release notes and breaking changes | [CHANGELOG.md](CHANGELOG.md) |
+| 🔗 **NuGet** | Package downloads and versions | [NuGet Gallery](https://www.nuget.org/packages/AzureImage/) |
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the .NET community**
+
+⭐ **Star this repository** if you find it useful!
+
+[🚀 **Get Started**](#quick-start) • [📖 **Documentation**](https://github.com/DrHazemAli/AzureImageSDK/wiki) • [💬 **Discussions**](https://github.com/DrHazemAli/AzureImageSDK/discussions)
+
+</div>

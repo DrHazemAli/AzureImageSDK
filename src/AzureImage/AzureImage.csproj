@@ -10,7 +10,7 @@
     <Title>Azure Image SDK</Title>
     <Authors>Hazem Ali</Authors>
     <Description>An SDK for Azure Image services including image generation and other image-related AI capabilities</Description>
-    <PackageTags>Azure;Image;SDK;StableImageUltra;StableImageCore;GPTImage1;ImageGeneration;ImageEditing</PackageTags>
+    <PackageTags>Azure;Image;SDK;StableImageUltra;StableImageCore;GPTImage1;DALLE3;ImageGeneration;ImageEditing</PackageTags>
     <PackageProjectUrl>https://github.com/DrHazemAli/AzureImage</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/DrHazemAli/AzureImage</RepositoryUrl>
@@ -19,7 +19,12 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
